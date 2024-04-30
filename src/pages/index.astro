@@ -1,0 +1,54 @@
+---
+import Badge from '../components/Badge.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import Layout from '../layouts/Layout.astro';
+import LinkeindIcon from '../components/icon/Linkedin.astro';
+import GitHubIcon from '../components/icon/GitHub.astro';
+import SocialPill from '../components/icon/SocialPill.astro';
+import MailIcon from '../components/icon/Mail.astro';
+import Experience from '../components/Expirience.astro';
+
+
+---
+
+<Layout title="Portafolio de Gerald Quiñenao - Desarrollador y Programador web"
+		description="Contrata a Gerald para crear tu aplicación web o móvil.">
+	<main>
+	<SectionContainer class="py-44 pb-24">
+	<img 
+    class="rounded-full size-12 mb-4"
+    src="src/photo/yo.jpeg"
+    alt="thegatosamurai">
+		<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+			Hey, Soy Gerald <a
+			href="https://www.linkedin.com/in/geraldquinenaoi"
+			target="_blank"
+			rel="noopener" 
+			class="flex justify-center items-center">
+				<Badge>Disponible para trabajar</Badge></a> </h1>
+		<h2 class="text-2xl  text-wrap">
+			<span>+1 año de experiencia. </span> <span class="opacity-90 text-yellow-200/80">
+				 Desarrollador Web y Creación de Proyectos.</span> 
+				<span class="opacity-50 text-red-200/90"> De Santiago, de Chile.</span>
+				<span class="opacity-75"> Especializado en Creación de aplicaciones únicas.</span>
+		</h2>
+			<nav class="flex gap-x-4 mt-8">
+				<SocialPill href="https://www.linkedin.com/in/geraldquinenaoi">
+				<LinkeindIcon class="size-6 "/>Linkedin
+				</SocialPill>
+				<SocialPill href="https://github.com/TheGatoSamurai">
+				<GitHubIcon class="size-6"/>GitHub
+				</SocialPill>
+				<SocialPill Link href="mailto:Geraldantonio50@gmail.com">
+				<MailIcon class="size-6"/>Geraldantonio50@gmail.com
+				</SocialPill>
+			</nav>
+	</SectionContainer>
+	<SectionContainer>
+		<h2 class="text-4xl font-bold">Experiencia Laboral</h2>
+		<Experience/>
+	</SectionContainer>
+
+
+	</main>
+</Layout>
