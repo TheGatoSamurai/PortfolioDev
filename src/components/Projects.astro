@@ -1,0 +1,63 @@
+---
+import HTML from './icon/Html.astro';
+import CSS from './icon/Css.astro';
+import JavaScript from './icon/Js.astro';
+import Bootstrap from './icon/Bootstrap.astro';
+
+const TAGS = {
+    HTML: {
+        name: "HTML",
+        class: "bg-black/15 text-red-800 font-semibold",
+        icon: HTML,
+    },
+    CSS: {
+        name: "Css",
+        class: "bg-black/15 text-blue-800 font-semibold",
+        icon: CSS,
+    },
+    JavaScript : {
+        name: "JavaScript",
+        class: "bg-black/15 text-yellow-800 font-semibold",
+        icon: JavaScript,
+    },
+    Bootstrap: {
+        name: "Bootstrap",
+        class: "bg-black/15 text-purple-800 font-semibold",
+        icon: Bootstrap,
+    }
+};
+
+
+const PROJECTS = [
+    {
+        title: "Tienda de mascotas",
+        description: "Ejemplo de una tienda de mascotas con un carrito de compras y un formulario de contacto v1.0",
+        link: "https://github.com/TheGatoSamurai/Experiencia1__PROGRAMACION-WEB_002V",
+        github: "https://github.com/TheGatoSamurai/Experiencia1__PROGRAMACION-WEB_002V",
+        image: "/src/photo/Weba.webp",
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScript, TAGS.Bootstrap],
+    },
+]
+---
+
+{
+    PROJECTS.map(({image,title,description,tags}) => (
+    <article>
+        <h3 class=" text-2xl font-semibold text-yellow-300/80 opacity-90 mb-2">{title}</h3>
+        <p class="text-lg mb-4 text-pretty">{description}</p>
+        <ul class="flex gap-x-2 flex-row">
+            {tags.map(tag => 
+                <li>
+                    <span class={`flex gap-x-2,5 rounded-full text-sm ${tag.class} px-1 py-2`}>
+                    <tag.icon class="size-4 "/>
+                    {tag.name}
+                    </span>
+                </li>)
+            }
+        </ul>
+        <img 
+        class="rounded shadow-2xl shadow-purple-800/30 "
+        src={image} alt={`Captura de pantalla del proyecto ${image}`} />
+    </article>
+    ))
+}
