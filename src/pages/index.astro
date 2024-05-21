@@ -12,6 +12,8 @@ import CodeIcon from '../components/icon/Code.astro';
 import Projects from '../components/Projects.astro';
 import AmongIcon from '../components/icon/Among.astro';
 import ImagenFoto from '../components/Imagen.astro';
+import AboutMe from '../components/AboutMe.astro';
+import CvIcon from '../components/icon/Cv.astro';
 
 
 ---
@@ -22,15 +24,15 @@ import ImagenFoto from '../components/Imagen.astro';
 	<SectionContainer class="py-44 pb-24">
 	<img 
     class="rounded-full size-7 md:size-9 lg:size-12 mb-4"
-    src="src/photo/yo.jpeg"
+    src="src/photo/ace.jpg"
     alt="thegatosamurai">
 		<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row size-4p-x-4 pb-6  lg:pb-10">
-			Hey, Soy Gerald <a
+			Hey, Soy Gerald <span class="pl-3"><a
 			href="https://www.linkedin.com/in/geraldquinenaoi"
 			target="_blank"
 			rel="noopener" 
 			class="flex justify-center items-center ">
-				<Badge class=" text-center">Disponible para trabajar</Badge></a> </h1>
+				<Badge class="pl-4 text-center">Disponible para trabajar</Badge></a></span> </h1>
 		<h2 class="text-2xl  text-wrap">
 			<span>+1 año de experiencia. </span> <span class="opacity-90 text-yellow-300/80">
 				 Desarrollador Web y Creación de Proyectos.</span> 
@@ -44,8 +46,11 @@ import ImagenFoto from '../components/Imagen.astro';
 				<SocialPill href="https://github.com/TheGatoSamurai">
 				<GitHubIcon class="size-4 lg:size-6 "/>GitHub
 				</SocialPill>
-				<SocialPill Link href="mailto:Geraldantonio50@gmail.com">
-				<MailIcon class="size-1  md:size-3 lg:size-5 "/>Geraldantonio50@gmail.com
+				<SocialPill Link href="mailto:geraldantonio50@gmail.com">
+				<CvIcon class="size-1  md:size-3 lg:size-6 "/>Descargar CV
+				</SocialPill>
+				<SocialPill Link href="mailto:geraldantonio50@gmail.com">
+				<MailIcon class="size-1  md:size-3 lg:size-5 "/>¡Enviame un email!
 				</SocialPill>
 			</nav>
 	</SectionContainer>
@@ -55,41 +60,22 @@ import ImagenFoto from '../components/Imagen.astro';
 			Experiencia Laboral</h2>
 		<Experience/>
 	</SectionContainer>
-	<SectionContainer id="proyectos" class="py-24 pb-24">
-		<h2 class="text-xl  lg:text-2xl text-wrap max-w-[500px] font-semibold mb-6  flex gap-x-3 items-center" >
+	<SectionContainer id="proyectos" class=" py-24 pb-24 s">
+		<h2 class="text-xl  lg:text-2xl text-wrap max-w-[750px] font-semibold mb-6  flex gap-x-3 items-center justify-items-center" >
 			<CodeIcon class="size-4 lg:size-9"/>
 			Proyectos
 		</h2>
-		<Projects/>
+		<Projects class="flex flex-row text-wrap mx-auto "/>
 	</SectionContainer>
 	<SectionContainer id="sobre-mi" class="py-24 pb-24">
 		<h2 class="text-xl  lg:text-2xl text-wrap max-w-[500px] font-semibold mb-6  flex gap-x-3 items-center" >
 			<AmongIcon class="size-4 lg:size-9"/>
 			Sobre mí
 		</h2>
-		<h2 >
-			<span class=" ms-auto text-4xl size-4p-x-4 text-pretty font-semibold flex flex-row opacity-90 text-sky-500/80">Gerald Antonio </span> 
-		</h2>
-		<h2 class="m-auto text-5xl text-pretty font-semibold flex flex-row pb-6">
-			<span class="opacity-90 text-yellow-300/80"> Quiñenao Ibarra</span> 
-		<h2 / >
-		<ImagenFoto/>
-		<p class="text-lg text-wrap mt-6">
-			Desarrollador web con más de un año de experiencia en la creación de aplicaciones web y móviles. 
-			He trabajado en proyectos de desarrollo web y móvil, y he creado aplicaciones web y móviles únicas. 
-			Estoy especializado en la creación de aplicaciones web y móviles únicas y en la creación de aplicaciones web y móviles únicas. 
-			Estoy especializado en la creación de aplicaciones web y móviles únicas y en la creación de aplicaciones web y móviles únicas. 
-			Estoy especializado en la creación de aplicaciones web y móviles únicas y en la creación de aplicaciones web y móviles únicas. 
-			Estoy especializado en la creación de aplicaciones web y móviles únicas y en la creación de aplicaciones web y móviles únicas. 
-			Estoy especializado en la creación de aplicaciones web y móviles únicas y en la creación de aplicaciones web y móviles únicas. 
-			Estoy especializado en la creación de aplicaciones web y móviles únicas y en la creación de aplicaciones web y móviles únicas. 
-			Estoy especializado en la creación de aplicaciones web y móviles únicas y en la creación de aplicaciones web y móviles únicas. 
-			Estoy especializado en la creación de aplicaciones web y móviles únicas y en la creación de aplicaciones web y móviles únicas.
-		
-			  
-		
-		
-
+		<span class="content-center items-center">
+		<ImagenFoto />
+		</span>
+		<AboutMe/>
 	</SectionContainer>
 
 	</main>
