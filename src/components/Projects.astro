@@ -4,39 +4,86 @@ import CSS from './icon/Css.astro';
 import JavaScript from './icon/Js.astro';
 import Bootstrap from './icon/Bootstrap.astro';
 import ProjectItem from "./ProjectItem.astro";
+import Typescript from './icon/Typescript.astro';
+import Angular from './icon/Angular.astro';
+import Ionic from './icon/Ionic.astro';
+import IconAstro from './icon/IconAstro.astro';
+import IconTailwind from './icon/Tailwind.astro';
 
 
 const TAGS = {
     HTML: {
         name: "HTML",
-        class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800",
+        class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200",
         icon: HTML,
     },
     CSS: {
         name: "Css",
-        class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800",
+        class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 ",
         icon: CSS,
     },
     JavaScript : {
         name: "JavaScript",
-        class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400",
+        class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 ",
         icon: JavaScript,
     },
     Bootstrap: {
         name: "Bootstrap",
-        class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800",
+        class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200",
         icon: Bootstrap,
-    }
+    },
+    Angular: {
+      name: "Angular",
+      class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-red-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-red-200 ",
+      icon: Angular,
+    },
+    Ionic: {
+      name: "Ionic",
+      class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300",
+      icon: Ionic,
+    },
+    Typescript: {
+      name: "Typescript",
+      class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-teal-300 to-lime-300 group-hover:from-teal-300 group-hover:to-lime-300 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-lime-200 ",
+      icon: Typescript,
+    },
+    IconAstro: {
+      name: "Astro",
+      class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200",
+      icon: IconAstro,
+    },
+    IconTailwind: {
+      name: "Tailwind",
+      class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200",
+      icon: IconTailwind,
+    },
+
 };
 const CARD_DATA = [
   {
 	title: "Cat Shop",
-	description: "Ejemplo de una tienda de mascotas con un carrito de compras y un formulario de contacto",
+	description: "Ejemplo de tienda de mascotas con un carrito de compras",
 	image: "src/photo/Weba.webp",
 	tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScript, TAGS.Bootstrap],
   link:"https://github.com/TheGatoSamurai/Experiencia1__PROGRAMACION-WEB_002V",
 
-  }]
+  },
+  {
+	title: "App QR",
+	description: "App en Angular y Ionic para generar codigos QR con un formulario de contacto",
+	image: "src/photo/QR.png",
+	tags: [TAGS.HTML, TAGS.Angular, TAGS.Ionic, TAGS.Typescript, TAGS.JavaScript],
+  link:"https://github.com/TheGatoSamurai/TuClaseQR_008v",
+
+  },
+  {
+  title: "Portfolio",
+  description: "Este mismo portafolio personal, basado en astro",
+  image: "src/photo/Portafolio.png",
+  tags: [TAGS.IconAstro,TAGS.IconTailwind ,TAGS.HTML, TAGS.JavaScript ],
+  link:"https://github.com/TheGatoSamurai/PortfolioDev",
+  }
+]
 
 ---
 <body class="bg-gray-100 p-10 flex-wrap">

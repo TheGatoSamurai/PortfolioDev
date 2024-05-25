@@ -1,0 +1,33 @@
+---
+import CertificacionItem from "./CertificacionItem.astro";
+const certificaciones = [
+  {
+    title: "Scrum Foundation Professional Certificate SFPC (v2020)",
+    description: "CertiProf",
+    date: "Octubre 2023",
+    image: "src/photo/scrum.png",
+    link: "https://www.credly.com/badges/1bb5b9aa-ddc8-44e8-aed8-a2ca0b1849c4/public_url",
+    },
+    {
+    title: "Diseño UX Essentials",
+    description: "Universidad de Chile (UCHILE)",
+    date: "Abril 2024",
+    image: "src/photo/DiseñoUx.png",
+    link: "https://cajalosandes.virtual-labx.cl/certificates/835ff5a3414748f1b5949afaadf0cf56",
+    },
+    {
+    title: "Python Essentials 1",
+    description: "Cisco",
+    date: "Mayo 2024",
+    image: "src/photo/cisco.png",
+    link: "https://www.credly.com/badges/e85a2909-a626-4ae9-81c7-2fa745345348",
+    },
+]
+---
+
+<section>
+    {certificaciones.map((certificacion) => (
+        <CertificacionItem {...certificacion} />
+    ))}
+
+</section>
