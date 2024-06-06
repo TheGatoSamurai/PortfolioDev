@@ -18,12 +18,14 @@ import CertificateIcon from '../components/icon/Certificate.astro';
 import ContactIcon from '../components/icon/Contact.astro';
 import Certificacion from '../components/Certificacion.astro';
 import Formulario from '../components/Formulario.astro';
+import SkillsIcon from '../components/icon/SkillsIcon.astro';
+import Skills from '../components/Skills.astro';
 
 
 ---
 
 <Layout title="Portafolio de Gerald Quiñenao - Desarrollador y Programador web"
-		description="Contrata a Gerald para crear tu aplicación web o móvil.">
+		description="Contrata a Gerald para crear tu aplicación web o móvil soñada.">
 	<main class="px-4">
 	<SectionContainer class="py-44 pb-24">
 	<img 
@@ -64,12 +66,12 @@ import Formulario from '../components/Formulario.astro';
 			Experiencia Laboral</h2>
 		<Experience/>
 	</SectionContainer>
-	<SectionContainer id="proyectos" class=" py-24 pb-24 ">
+	<SectionContainer id="proyectos" class=" py-24 pb-24 " >
 		<h2 class="text-xl  lg:text-2xl text-wrap max-w-[750px] font-semibold mb-6  flex gap-x-3 items-center justify-items-center" >
 			<CodeIcon class="size-4 lg:size-9"/>
 			Proyectos
 		</h2>
-		<Projects />
+		<Projects class="max-w-xs"/>
 	</SectionContainer>
 	<SectionContainer id="sobre-mi" class="py-22 pb-24">
 		<h2 class="text-xl  lg:text-2xl text-wrap max-w-[500px] font-semibold mb-6  flex gap-x-3 items-center" >
@@ -80,6 +82,13 @@ import Formulario from '../components/Formulario.astro';
 		<ImagenFoto />
 		</span>
 		<AboutMe/>
+	</SectionContainer>
+	<SectionContainer id="skills" class="py-22 pb-24">
+		<h2 class="text-xl  lg:text-2xl text-wrap max-w-[500px] font-semibold mb-6  flex gap-x-3 items-center" >
+			<SkillsIcon class="size-4 lg:size-9"/>
+			Skills
+		</h2>
+		<Skills/>
 	</SectionContainer>
 	<SectionContainer id="certificate" class="py-18 pb-24">
 		<h2 class="text-xl  lg:text-2xl text-wrap max-w-[500px] font-semibold mb-6  flex gap-x-3 items-center" >

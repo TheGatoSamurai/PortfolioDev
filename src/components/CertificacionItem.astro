@@ -8,18 +8,18 @@ export interface Props {
 }
 const { title, description, date,image, link} = Astro.props;
 ---
-<container class="py-4 flow-root mx-4">
+<container class="py-4 flow-root mx-4  flex-wrap justify-center">
 <a href={link} 
-class="flex  mx-5 flex-col items-center  border-blue-700/10 rounded-lg shadow md:flex-row md:max-w-xlbg-gradient bg-gradient-to-l from-purple-600/50 to-blue-800/40 bg-clip-padding ">
+class="flex mx-5 flex-col items-center  border-blue-700/10 rounded-lg shadow md:flex-row md:max-w-xlbg-gradient bg-gradient-to-l from-purple-600/50 to-blue-800/40 bg-clip-padding ">
     <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" 
     src={image} alt={title} >
     <div class="flex flex-col justify-center p-4 leading-normal">
         <h5 
-        class=" justify-center text-justify mb-2 text-xl font-bold tracking-tight text-yellow-300/80">
+        class=" justify-center text-pretty mb-2 tracking-tight text-lg font-semibold text-yellow-400">
         {title}</h5>
-        <p class="mx-2 text-sm text-justify text-cyan-400/55 ">
+        <p class="mx-1 text-sm text-pretty  text-gray-400 ">
             {date}</p>
-        <p class="mx-2 font-normal text-gray-200/55 text-justify">
+        <p class="mx-1 font-normal  text-gray-300 text-pretty">
             {description}</p>
     </div>
 </a>

@@ -9,6 +9,9 @@ import Angular from './icon/Angular.astro';
 import Ionic from './icon/Ionic.astro';
 import IconAstro from './icon/IconAstro.astro';
 import IconTailwind from './icon/Tailwind.astro';
+import Shopify from './icon/Shopify.astro';
+import Flutter from './icon/Flutter.astro';
+import FireBase from './icon/Firebase.astro';
 
 
 const TAGS = {
@@ -57,6 +60,21 @@ const TAGS = {
       class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200",
       icon: IconTailwind,
     },
+    Shopify: {
+      name: "Shopify",
+      class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200",
+      icon: Shopify,
+    },
+    Flutter: {
+      name: "Flutter",
+      class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200",
+      icon: Flutter,
+    },
+    FireBase: {
+      name: "FireBase",
+      class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200",
+      icon: FireBase,
+    },
 
 };
 const CARD_DATA = [
@@ -82,17 +100,30 @@ const CARD_DATA = [
   image: "src/photo/Portafolio.png",
   tags: [TAGS.IconAstro,TAGS.IconTailwind ,TAGS.HTML, TAGS.JavaScript ],
   link:"https://github.com/TheGatoSamurai/PortfolioDev",
-  }
+  },
+  {
+  title: "Shopify",
+  description: "Proyecto de tienda online con Shopify, con un diseño minimalista y elegante.    En construccion 🚧",
+  image: "src/photo/shopify.png",
+  tags: [TAGS.Shopify ,TAGS.HTML, TAGS.CSS, TAGS.JavaScript ],
+  link:"",
+  },
+  {
+  title: "App Movil",
+  description: "Proyecto movil con Flutter,    En construccion 🚧",
+  image: "src/photo/flutter.png",
+  tags: [TAGS.Flutter, TAGS.FireBase, TAGS.JavaScript, TAGS.Typescript, TAGS.HTML, TAGS.CSS],
+  link:"",
+  },
 ]
 
 ---
-<body class="bg-gray-100 p-10 flex-wrap">
-<ol>
+
+<container class="flex flex-wrap justify-center gap-4">
   {CARD_DATA.map((card) => (
-    <ProjectItem {...card}  />
+    <ProjectItem {...card} />
   ))}
-</ol>
-</body>
+</container>
 
 
 
