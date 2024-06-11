@@ -20,6 +20,8 @@ import Certificacion from '../components/Certificacion.astro';
 import Formulario from '../components/Formulario.astro';
 import SkillsIcon from '../components/icon/SkillsIcon.astro';
 import Skills from '../components/Skills.astro';
+import Typing from '../components/Typing.astro';
+import Trabajemos from '../components/Trabajemos.astro';
 
 
 ---
@@ -29,56 +31,59 @@ import Skills from '../components/Skills.astro';
 	<main class="px-4">
 	<SectionContainer class="py-44 pb-24">
 	<img 
-    class="rounded-full size-7 md:size-9 lg:size-12 mb-4"
+    class="rounded-full size-7 md:size-9 lg:size-12 mb-4 flex-wrap justify-center"
     src="src/photo/ace.jpg"
     alt="thegatosamurai">
-		<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row size-4p-x-4 pb-6  lg:pb-10">
-			Hey, Soy Gerald <span class="pl-3"><a
-			href="https://www.linkedin.com/in/geraldquinenaoi"
+		<h1 class=" md:text-4xl lg:text-5xl  flex flex-row  lg:pb-10">
+			<Typing/> 
+			<a href="https://www.linkedin.com/in/geraldquinenaoi"
 			target="_blank"
 			rel="noopener" 
-			class="flex justify-center items-center ">
-				<Badge class="pl-4 text-center">Disponible para trabajar</Badge></a></span> </h1>
+			class="flex items-center flex-wrap justify-end">
+			<Badge class="text-center flex text-wrap flex-row "></a></h1>
 		<h2 class="text-2xl  text-wrap">
 			<span>+1 año de experiencia. </span> <span class="opacity-90 text-yellow-300/80">
 				 Desarrollador Web y Creación de Proyectos.</span> 
-				<span class="opacity-90 text-sky-300/80"> De Santiago, de Chile.</span>
+				<span class="opacity-90 text-gray-400/80 "> De Santiago, de Chile.</span>
 				<span class="opacity-75"> Especializado en Creación de aplicaciones únicas.</span>
 		</h2>
 			<nav class="flex gap-4 mt-8 flex-wrap">
 				<SocialPill href="https://www.linkedin.com/in/geraldquinenaoi">
-				<LinkeindIcon class="size-4 lg:size-8  "/>Linkedin
+				<LinkeindIcon class="size-4 md:size-6 lg:size-8  "/>Linkedin
 				</SocialPill>
 				<SocialPill href="https://github.com/TheGatoSamurai">
-				<GitHubIcon class="size-4 lg:size-8 "/>GitHub
+				<GitHubIcon class="size-4 md:size-6 lg:size-8 "/>GitHub
 				</SocialPill>
 				<SocialPill Link href="https://drive.google.com/file/d/1NbshTbY9Glm4RgN5sjWSaUMbkCmWHPyw/view?usp=sharing">
 				<CvIcon class="size-1  md:size-3 lg:size-8 "/>Descargar CV
 				</SocialPill>
 				<SocialPill Link href="mailto:geraldantonio50@gmail.com">
-				<MailIcon class="size-1 "/>¡Enviame un email!
+				<MailIcon class="size-1 md:size-3 lg:size-8"/>¡Enviame un email!
 				</SocialPill>
 			</nav>
 	</SectionContainer>
-	<SectionContainer id="experiencia">
+	<SectionContainer id="experiencia" >
 		<h2 class="text-xl  lg:text-2xl text-wrap max-w-[500px] font-semibold mb-6  flex gap-x-3 items-center">
 			<BriefCaseIcon class="size-4 lg:size-7"/>
 			Experiencia Laboral</h2>
 		<Experience/>
 	</SectionContainer>
-	<SectionContainer id="proyectos" class=" py-24 pb-24 " >
+	<SectionContainer id="proyectos" class=" py-12 pb-24 " >
 		<h2 class="text-xl  lg:text-2xl text-wrap max-w-[750px] font-semibold mb-6  flex gap-x-3 items-center justify-items-center" >
 			<CodeIcon class="size-4 lg:size-9"/>
 			Proyectos
 		</h2>
 		<Projects class="max-w-xs"/>
 	</SectionContainer>
-	<SectionContainer id="sobre-mi" class="py-22 pb-24">
+	<SectionContainer class="py-10 pb-16">
+	<Trabajemos/>
+	</SectionContainer>
+	<SectionContainer id="sobre-mi" class="py-10 pb-24">
 		<h2 class="text-xl  lg:text-2xl text-wrap max-w-[500px] font-semibold mb-6  flex gap-x-3 items-center" >
 			<AmongIcon class="size-4 lg:size-9"/>
 			Sobre mí
 		</h2>
-		<span class="aspect-auto content-center items-center">
+		<span class="aspect-auto content-center items-center max-w-xs">
 		<ImagenFoto />
 		</span>
 		<AboutMe/>
@@ -97,7 +102,7 @@ import Skills from '../components/Skills.astro';
 		</h2>
 		<Certificacion />
 	</SectionContainer>
-	<SectionContainer id="contacto" class="py-18 pb-24">
+	<SectionContainer id="contacto" class="py-18 pb-24 ">
 		<h2 class="text-xl  lg:text-2xl text-wrap max-w-[500px] font-semibold mb-6  flex gap-x-3 items-center" >
 			<ContactIcon class="size-4 lg:size-9"/>
 			Contactame

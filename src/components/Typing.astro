@@ -1,0 +1,65 @@
+
+
+<div class="container">
+    <span class="text first-text">Hey,</span>
+    <span class="text sec-text">Hola Mundo!</span>
+</div>
+
+<style>
+
+
+.container .text{
+    position: relative;
+    color: rgb(253 224 71 / 0.8);
+    font-size: 36px;
+    font-weight: 700;
+}
+.container .text.first-text{
+    color: #FFF;
+    font-size: 36px;
+}
+.text.sec-text:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    border-left: 2px solid #63e;
+    animation: animate 4s steps(12) infinite;
+}
+@keyframes animate{
+    40%, 60%{
+        left: calc(100% + 8px);
+    }
+    100%{
+        left: 0%;
+    }
+}
+</style>
+
+<script>
+    const text = document.querySelector(".sec-text");
+    const textLoad = () => {
+        setTimeout(() => {
+    if (text) {
+        text.textContent = "Soy Gerald";
+    }
+        }, 3850);
+        
+    setTimeout(() => {
+    if (text) {
+        text.textContent = "Developer";
+    }
+        }, 8000);
+        
+    setTimeout(() => {
+    if (text) {
+        text.textContent ="Soy el indicado";
+    }
+    }, 12000); //1s = 1000 millisecon
+    }
+    textLoad();
+    setInterval(textLoad, 12000);
+</script> 
