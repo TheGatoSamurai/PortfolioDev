@@ -1,11 +1,31 @@
+---
+import Among from "./icon/Among.astro";
+import BriefCase from "./icon/BriefCase.astro";
+import Certificate from "./icon/Certificate.astro";
+import Code from "./icon/Code.astro";
+import Contact from "./icon/Contact.astro";
+import Home from "./icon/Home.astro";
+import SkillsIcon from "./icon/SkillsIcon.astro";
+---
+
 <header class="flex justify-center items-center py-5 w-full xl:w-[1120px] mx-auto">
     <nav class="flex flex-row gap-x-10 opacity-80">
-        <a href="#top">Inicio</a>
-        <a href="#experiencia">Experiencia</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#skills">Skill's</a>
-        <a href="#certificate">Certificación</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#top" class="hidden md:block sm:block">Inicio</a>
+        <a href="#experiencia" class="hidden md:block sm:block">Experiencia</a>
+        <a href="#proyectos" class="hidden md:block sm:block">Proyectos</a>
+        <a href="#sobre-mi" class="hidden md:block sm:block">Sobre mí</a>
+        <a href="#skills" class="hidden md:block sm:block">Skill's</a>
+        <a href="#certificate" class="hidden md:block sm:block">Certificación</a>
+        <a href="#contacto" class="hidden md:block sm:block">Contacto</a>
+        
+        <!--- Iconos para movil --->
+        <a href="#top" class="block md:hidden sm:hidden"><Home class=" sm:size-5  md:size-10"/></a>
+        <a href="#experiencia" class="block md:hidden sm:hidden"><BriefCase class="sm:size-5  md:size-10"/></a>
+        <a href="#proyectos" class="block md:hidden sm:hidden" ><Code class="sm:size-5  md:size-10"/></a>
+        <a href="#sobre-mi" class="block md:hidden sm:hidden"><Among class="sm:size-5  md:size-10"/></a>
+        <a href="#skills" class="block md:hidden sm:hidden"><SkillsIcon class="sm:size-5  md:size-10"/></a>
+        <a href="#certificate" class="block md:hidden sm:hidden"><Certificate class="sm:size-5  md:size-10"/></a>
+        <a href="#contacto" class="block md:hidden sm:hidden"><Contact class="sm:size-5  md:size-10"/></a>
+        
     </nav>
 </header>

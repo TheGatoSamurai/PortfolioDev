@@ -11,8 +11,21 @@ const{ titulo, description} =  Astro.props;
     <h2 class=" py-1 bg-gradient  text-2xl font-extrabold font-style: italic text-center px-4 mx-6"><span class=" rounded-lg  text-white "> Gerald Quiñenao</span></h2>
     <p class="mx-4 text-base text-center font-extralight text-pretty py-4 flow-root text-gray-300">Estudiante de <span class="opacity-90 font-extrabold text-yellow-300/90">Duoc Uc </span> San Joaquin.
         <span class="font-extrabold text-yellow-300/90"> Desarrollador Backend y Frontend</span>, me gusta la programación y la tecnología. <span class="text-red-300/90 font-extrabold">Me gusta aprender y ampliar nuevos horizontes como compartir mis conocimientos asi crear una mejor area profesional.</span> 
-        <span class=" py-1 flow-root ">
-            Me gusta capacitarme en nuevas tecnologías y herramientas. Me gusta la música, el deporte, me encanta andar en bicicleta y la tecnología como componentes. El anime, como tambien el merchandising del mismo y un amante de la lectura fanatico de Tolkien y el mundo medieval.</span>
-            <span> </span>
+        <span class=" py-1 flow-root " >
+            Me gusta capacitarme en nuevas tecnologías y herramientas. Me gusta la música, el deporte, me encanta andar en bicicleta y la tecnología como componentes. El anime, como tambien el merchandising del mismo y un amante de la lectura fanatico de Tolkien y el mundo medieval. <span class="cursor"></span></span>
     </p>
     </a>
+
+<style>
+.cursor{
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid rgb(209 213 219 / var(--tw-text-opacity));
+    animation: cursor .4s step-end infinite alternate; 
+}
+
+@keyframes cursor{
+    50%{border-color: transparent;}
+}
+
+</style>
