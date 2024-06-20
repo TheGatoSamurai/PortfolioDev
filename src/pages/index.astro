@@ -29,49 +29,49 @@ import Trabajemos from '../components/Trabajemos.astro';
 <Layout title="Portafolio de Gerald Quiñenao - Desarrollador y Programador web"
 		description="Contrata a Gerald para crear tu aplicación web o móvil soñada.">
 	<main class="px-4">
-	<SectionContainer class="py-44 pb-24">
+	<SectionContainer class="py-44 pb-24 2xl:flow-root 2xl:pt-64 sm:pt-40">
 	<img 
     class="rounded-full size-7 md:size-9 lg:size-12 mb-4 flex-wrap justify-center"
     src="/images/ace.jpg"
     alt="thegatosamurai">
-		<h1 class=" md:text-4xl lg:text-5xl sm:text-2xl  flex flex-row  lg:pb-10">
+		<h1 class=" md:text-4xl lg:text-5xl sm:text-3xl  flex flex-row  lg:pb-10 2xl:text-7xl">
 			<Typing /> 
 			</h1>
 			<a href="https://www.linkedin.com/in/geraldquinenaoi"
 			target="_blank"
 			rel="noopener" 
 			class="flex items-center flex-wrap justify-end">
-			<Badge class="text-start flex text-wrap flex-row "></a>
-		<h2 class="lg:text-2xl sm:text-xl text-wrap">
+			<Badge class="text-start flex text-wrap flex-row"></a>
+		<h2 class="lg:text-3xl sm:text-2xl text-wrap ">
 			<span>+1 año de experiencia. </span> <span class="opacity-90 text-yellow-300/80">
 				 Desarrollador Web y Creación de Proyectos.</span> 
 				<span class="opacity-90 text-gray-400/80 "> De Santiago, de Chile.</span>
 				<span class="opacity-75"> Especializado en Creación de aplicaciones únicas.</span>
 		</h2>
-			<nav class="flex gap-4 mt-8 flex-wrap">
+			<nav class="flex gap-4 mt-8 flex-wrap md:items-center md:text-center">
 				<SocialPill href="https://www.linkedin.com/in/geraldquinenaoi">
-				<LinkeindIcon class="size-4 md:size-6 lg:size-8  "/>Linkedin
+				<LinkeindIcon class="size-7 md:size-6 lg:size-8 xl:size-10 "/>Linkedin
 				</SocialPill>
 				<SocialPill href="https://github.com/TheGatoSamurai">
-				<GitHubIcon class="size-4 md:size-6 lg:size-8 "/>GitHub
+				<GitHubIcon class="size-7 lg:size-8 xl:size-10"/>GitHub
 				</SocialPill>
 				<SocialPill Link href="https://drive.google.com/file/d/1ypdZT4pDD_5RwoPy8nEwRpK7dJ55NbNN/view?usp=sharing">
-				<CvIcon class="sm:size-3  md:size-5 lg:size-8 "/>Descargar CV
+				<CvIcon class="size-7 lg:size-8 xl:size-10"/>Descargar CV
 				</SocialPill>
 				<SocialPill Link href="mailto:geraldantonio50@gmail.com">
-				<MailIcon class="sm:size-3  md:size-5 lg:size-10"/>¡Enviame un email!
+				<MailIcon class="size-7 lg:size-8 xl:size-10"/>¡Enviame un email!
 				</SocialPill>
 			</nav>
 	</SectionContainer>
 	<SectionContainer id="experiencia" >
-		<h2 class="text-xl  lg:text-2xl text-wrap max-w-[750px] font-semibold mb-6  flex gap-x-3 items-center">
-			<BriefCaseIcon class="size-4 lg:size-7"/>
+		<h2 class="text-xl 2xl:pt-20 lg:text-2xl 2xl:text-3xl text-wrap max-w-[750px] font-semibold mb-6  flex gap-x-3 items-center">
+			<BriefCaseIcon class="size-7 lg:size-8 xl:size-10"/>
 			Experiencia Laboral</h2>
 		<Experience/>
 	</SectionContainer>
 	<SectionContainer id="proyectos" class=" py-12 pb-24 " >
-		<h2 class="text-xl  lg:text-2xl text-wrap max-w-[750px] font-semibold mb-6  flex gap-x-3 items-center justify-items-center" >
-			<CodeIcon class="size-4 lg:size-9"/>
+		<h2 class="text-xl  lg:text-2xl 2xl:text-3xl text-wrap max-w-[750px] font-semibold mb-6  flex gap-x-3 items-center justify-items-center" >
+			<CodeIcon class="size-7 lg:size-9 xl:size-10"/>
 			Proyectos
 		</h2>
 		<Projects class="max-w-xs"/>
@@ -80,8 +80,8 @@ import Trabajemos from '../components/Trabajemos.astro';
 	<Trabajemos/>
 	</SectionContainer>
 	<SectionContainer id="sobre-mi" class="py-10 pb-24">
-		<h2 class="text-xl  lg:text-2xl text-wrap max-w-[750px] font-semibold mb-6  flex gap-x-3 items-center" >
-			<AmongIcon class="size-4 lg:size-9"/>
+		<h2 class="text-xl  lg:text-2xl 2xl:text-3xl text-wrap max-w-[750px] font-semibold mb-6  flex gap-x-3 items-center" >
+			<AmongIcon class="size-7 lg:size-8 xl:size-11"/>
 			Sobre mí
 		</h2>
 		<div class="aspect-auto content-center items-center max-w-[750px] ">
@@ -90,22 +90,22 @@ import Trabajemos from '../components/Trabajemos.astro';
 		<AboutMe/>
 	</SectionContainer>
 	<SectionContainer id="skills" class="py-22 pb-24">
-		<h2 class="text-xl  lg:text-2xl text-wrap max-w-[750px] font-semibold mb-6  flex gap-x-3 items-center" >
-			<SkillsIcon class="size-4 lg:size-9"/>
+		<h2 class="text-xl lg:text-2xl 2xl:text-3xl text-wrap max-w-[750px] font-semibold mb-6  flex gap-x-3 items-center" >
+			<SkillsIcon class="size-7 lg:size-8 xl:size-11"/>
 			Skills
 		</h2>
 		<Skills/>
 	</SectionContainer>
 	<SectionContainer id="certificate" class="py-18 pb-24">
-		<h2 class="text-xl  lg:text-2xl text-wrap max-w-[750px] font-semibold mb-6  flex gap-x-3 items-center" >
-			<CertificateIcon class="size-4 lg:size-9"/>
+		<h2 class="text-xl lg:text-2xl  2xl:text-3xltext-wrap max-w-[750px] font-semibold mb-6  flex gap-x-3 items-center" >
+			<CertificateIcon class="size-7 lg:size-8 xl:size-11"/>
 			Certificación
 		</h2>
 		<Certificacion />
 	</SectionContainer>
 	<SectionContainer id="contacto" class="py-18 pb-24 ">
-		<h2 class="text-xl  lg:text-2xl text-wrap max-w-[750px] font-semibold mb-6  flex gap-x-3 items-center" >
-			<ContactIcon class="size-4 lg:size-9"/>
+		<h2 class="text-xl lg:text-2xl 2xl:text-3xl text-wrap max-w-[750px] font-semibold mb-6  flex gap-x-3 items-center" >
+			<ContactIcon class="size-7 lg:size-8 xl:size-11"/>
 			Contactame
 		</h2>
 		<Formulario class="text-wrap max-w-[750px]"/>
