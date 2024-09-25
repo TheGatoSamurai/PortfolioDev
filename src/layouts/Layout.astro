@@ -1,8 +1,8 @@
 ---
 // Supports weights 100-900
 import '@fontsource-variable/onest';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
 
 interface Props {
 	title: string;
@@ -21,10 +21,13 @@ const {description, title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/images/GatoSamurai.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<meta property="og:title" content="Portafolio thegatosamurai - Desarrollador y Programador web">
-		<meta property="og:description" content="Desarrollador Web y Creación de tu proyecto informatico ideal">
+		<meta property="og:title" content="Tu colaborador ideal ya existe. Thegatosamurai ⭐ Desarrollador y Programador web">
+		<meta property="og:description" content="No pierdas tiempo buscando más. Aquí encontrarás las habilidades y la creatividad que harán despegar tu proyecto. Explora mi portafolio y conoce lo que podemos crear juntos.">
 		<meta property="og:image" content="/images/Portafolio.png">
+		<meta property="og:url" content="www.thegatosamurai.dev">
 		<meta property="og:url" content="thegatosamurai.dev">
+		<meta property="og:url" content="https://thegatosamurai.dev/">
+		<meta property="og:url" content="https://www.thegatosamurai.dev/">
 		<meta property="og:type" content="website">
 	</head>
 	<body class="px-4">
