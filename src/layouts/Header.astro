@@ -6,6 +6,8 @@ import Code from '../components/icon/Code.astro';
 import Contact from '../components/icon/Contact.astro';
 import Home from '../components/icon/Home.astro';
 import SkillsIcon from '../components/icon/SkillsIcon.astro';
+import Instagram from '../components/icon/Instagram.astro';
+import Facebook from '../components/icon/Facebook.astro';
 ---
 
 <header class="flex justify-center items-center py-5  xl:w-[1120px] sm:max-w-xs md:max-w-md mx-auto">
@@ -17,7 +19,13 @@ import SkillsIcon from '../components/icon/SkillsIcon.astro';
         <a href="#skills" class="hidden md:block sm:block">Skill's</a>
         <a href="#certificate" class="hidden md:block sm:block">Certificación</a>
         <a href="#contacto" class="hidden md:block sm:block">Contacto</a>
-        
+        <a
+            href="https://www.instagram.com/thegatosamurai/"
+            class="hidden md:block sm:block transition-transform duration-200 hover:scale-110 active:scale-95"
+            aria-label="Instagram"
+            >
+            <Instagram class="w-7 h-7 fill-current" />
+        </a>
         <!--- Iconos para movil --->
         <a href="#top" class="block md:hidden sm:hidden"><Home class=" sm:size-5  md:size-10"/></a>
         <a href="#experiencia" class="block md:hidden sm:hidden"><BriefCase class="sm:size-5  md:size-10"/></a>
@@ -26,6 +34,14 @@ import SkillsIcon from '../components/icon/SkillsIcon.astro';
         <a href="#skills" class="block md:hidden sm:hidden"><SkillsIcon class="sm:size-5  md:size-10"/></a>
         <a href="#certificate" class="block md:hidden sm:hidden"><Certificate class="sm:size-5  md:size-10"/></a>
         <a href="#contacto" class="block md:hidden sm:hidden"><Contact class="sm:size-5  md:size-10"/></a>
-        
+        <a
+            href="https://www.instagram.com/thegatosamurai/"
+            class="block md:hidden sm:hidden transition-transform duration-200 hover:scale-110 active:scale-95"
+            aria-label="Instagram"
+            >
+            <Instagram class="sm:size-5  md:size-10 fill-current" />
+        </a>
     </nav>
 </header>
+
+</div>
