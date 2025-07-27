@@ -3,6 +3,7 @@
 import '@fontsource-variable/onest';
 import Header from './Header.astro';
 import Footer from './Footer.astro';
+import GoogleAnalytics from './GoogleAnalytics.astro';
 
 interface Props {
 	title: string;
@@ -15,6 +16,7 @@ const {description, title } = Astro.props;
 <!doctype html>
 <html lang="en">
 	<head>
+		<GoogleAnalytics />
 		<meta charset="UTF-8" />
 		<meta name={description} content={Astro.generator} />
 		<meta name="viewport" content="width=device-width" />
@@ -26,16 +28,7 @@ const {description, title } = Astro.props;
 		<meta property="og:image" content="/images/Portafolio.png">
 		<meta property="og:url" content="https://www.thegatosamurai.dev/">
 		<meta property="og:type" content="website">
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-676X1SZM4V"></script>
-		<script>
-		// @ts-ignore
-		window.dataLayer = window.dataLayer || [];
-		// @ts-ignore
-		function gtag(...args) { window.dataLayer.push(args); }
-		gtag('js', new Date());
-		gtag('config', 'G-676X1SZM4V');
-		</script>
+	
 	</head>
 	<body class="px-4">
 		<div class="background"

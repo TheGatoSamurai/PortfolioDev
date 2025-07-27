@@ -12,6 +12,9 @@ import IconTailwind from './icon/Tailwind.astro';
 import Shopify from './icon/Shopify.astro';
 import Flutter from './icon/Flutter.astro';
 import FireBase from './icon/Firebase.astro';
+import Python from './icon/Python.astro';
+import Node from './icon/Node.astro';
+import Discord from './icon/Discord.astro';
 
 
 const TAGS = {
@@ -75,6 +78,21 @@ const TAGS = {
       class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200",
       icon: FireBase,
     },
+    Python: {
+      name: "Python",
+      class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-yellow-400 to-red-500 group-hover:from-yellow-400 group-hover:to-red-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-yellow-200",
+      icon: Python,
+    },
+    Node: {
+      name: "Node.js",
+      class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200",
+      icon: Node,
+    },
+    Discord:{
+      name: "Discord",
+      class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-blue-500 to-purple-600 group-hover:from-blue-500 group-hover:to-purple-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-200",
+      icon: Discord,
+    }
 
 };
 const CARD_DATA = [
@@ -106,7 +124,21 @@ const CARD_DATA = [
   description: "Desarrollando: Web de iglesia, basada en astro y tailwind",
   image: "/images/AET.png",
   tags: [TAGS.HTML, TAGS.IconAstro, TAGS.IconTailwind, TAGS.JavaScript],
-  } 
+  },
+  {
+  title: "Easy OCR Reader",
+  description: "Una herramienta simple para aplicar OCR (Reconocimiento Óptico de Caracteres).",
+  image: "/images/OCR.png",
+  link: "https://github.com/TheGatoSamurai/EasyOCR-Reader",
+  tags: [TAGS.Python, TAGS.JavaScript],
+  },
+  {
+  title: "BotNeko",
+  description: "Un bot de Discord para gestionar mi servidor personal.",
+  image: "/images/BotNeko.png",
+  tags: [TAGS.JavaScript, TAGS.Node, TAGS.Discord],
+  link:"https://github.com/TheGatoSamurai/BotNeko",
+  }
 ]
 
 ---
