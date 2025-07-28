@@ -17,11 +17,12 @@
 
 ## 📁 Proyectos Destacados
 
-| Proyecto | Descripción | Tecnologías |
-|---------|-------------|-------------|
-| **Sun y Neko** | Tienda online de ropa y accesorios de moda asiática. Diseño, desarrollo y redacción de descripciones de productos. | Shopify, SEO, HTML/CSS, Branding |
-| **Ahora es el Tiempo (AET)** | Sitio web informativo para una organización religiosa. Interfaz intuitiva y accesible. | Astro, TailwindCSS, Markdown |
-| **Buscador de Personajes Marvel** | Web app usando la API de Marvel para buscar superhéroes y villanos. | React, API REST, JavaScript, Postman |
+| Proyecto                | Descripción                                                                 | Tecnologías                        |
+|-------------------------|-----------------------------------------------------------------------------|------------------------------------|
+| **Sun y Neko**          | Tienda online de ropa y accesorios de moda asiática. Diseño, desarrollo y redacción de descripciones de productos. | Shopify, SEO, HTML/CSS, Branding   |
+| **Ahora es el Tiempo (AET)** | Sitio web informativo para una organización religiosa. Interfaz intuitiva y accesible. | Astro, TailwindCSS, Markdown       |
+| **Easy OCR Reader**     | Herramienta simple para aplicar OCR (Reconocimiento Óptico de Caracteres).  | Python, JavaScript                 |
+| **BotNeko**             | Bot de Discord para gestionar mi servidor personal.                         | Node.js, JavaScript, Discord.js    |
 
 > Revisa la carpeta `/projects` para ver el código de cada uno.
 
@@ -33,7 +34,7 @@ Este repositorio me ayuda a organizar y mostrar mis avances como desarrollador. 
 
 - 🌐 Sitio web: [thegatosamurai.dev](https://thegatosamurai.dev)
 - ✉️ Email: thegatosamurai@gmail.com
-- 💼 LinkedIn: [linkedin.com/in/thegatosamurai](https://www.linkedin.com/in/geraldquinenaoi/)
+- 💼 LinkedIn: [linkedin.com/in/thegatosamurai](https://www.linkedin.com/in/thegatosamurai/)
 
 ---
 
