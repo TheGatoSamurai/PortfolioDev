@@ -35,6 +35,8 @@ Este repositorio me ayuda a organizar y mostrar mis avances como desarrollador. 
 - 🌐 Sitio web: [thegatosamurai.dev](https://thegatosamurai.dev)
 - ✉️ Email: thegatosamurai@gmail.com
 - 💼 LinkedIn: [linkedin.com/in/thegatosamurai](https://www.linkedin.com/in/thegatosamurai/)
+- 🐾 Instagram deTheGatoSamurai [@TheGatoSamurai](https://www.instagram.com/thegatosamurai/)
+- 📝 Blog personal de poesia: [Damian Ruaj](https://damiancarmesi.blogspot.com/)
 
 ---
 
