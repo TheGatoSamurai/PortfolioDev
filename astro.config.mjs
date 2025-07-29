@@ -1,11 +1,21 @@
-import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
+import { defineConfig } from 'astro/config';
+import netlify from '@astrojs/netlify';
+import tailwind from '@astrojs/tailwind';
 
-import netlify from '@astrojs/netlify/functions';
-// https://astro.build/config
 export default defineConfig({
+  output: 'server',
+  adapter: netlify(),
   integrations: [tailwind()],
-  output: "server",
-  adapter: netlify({
-  }),
+  vite: {
+    build: {
+      rollupOptions: {
+      }
+    }
+  },
+  hooks: {
+    'astro:build:done': async ({ dir }) => {
+      const fs = await import('fs/promises');
+      await fs.copyFile('_redirects', `${dir}/_redirects`);
+    }
+  }
 });
