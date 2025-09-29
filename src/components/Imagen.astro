@@ -1,6 +1,9 @@
-<img 
-{...Astro.props}
-class=" mx-auto max-w-2xl md:text-center shadow-xl shadow-purple-800/30 size-60 float-center box-content my-10 items-center content-center rounded-3xl  
-transition-all duration-100  blur-[0.5px] hover:blur-none" 
-src="/images/yo.jpeg"
- alt="thegatosamurai">
+<figure {...Astro.props} class="mx-auto my-10">
+	<div class="w-[min(320px,80%)] md:w-80 lg:w-96 aspect-square rounded-3xl overflow-hidden p-1 bg-gradient-to-b from-transparent to-purple-900/5 shadow-2xl transition-transform duration-300 hover:scale-105">
+		<img
+			src="/images/yo.jpg"
+			alt="Foto de perfil"
+			class="w-full h-full object-cover block"
+		/>
+	</div>
+</figure>
