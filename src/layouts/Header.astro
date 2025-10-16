@@ -7,18 +7,20 @@ import Contact from '../components/icon/Contact.astro';
 import Home from '../components/icon/Home.astro';
 import SkillsIcon from '../components/icon/SkillsIcon.astro';
 import Instagram from '../components/icon/Instagram.astro';
+import LanguageToggle from '../components/LanguageToggle.astro';
 import Facebook from '../components/icon/Facebook.astro';
 ---
 
-<header class="flex justify-center items-center py-5  xl:w-[1120px] sm:max-w-xs md:max-w-md mx-auto">
-    <nav class="flex flex-row gap-x-10 opacity-80 text-center  ">
-        <a href="#top" class="hidden md:block sm:block">Inicio</a>
-        <a href="#experiencia" class="hidden md:block sm:block">Experiencia</a>
-        <a href="#proyectos" class="hidden md:block sm:block">Proyectos</a>
-        <a href="#sobre-mi" class="hidden md:block sm:block ">Sobre mí</a>
-        <a href="#skills" class="hidden md:block sm:block">Skill's</a>
-        <a href="#certificate" class="hidden md:block sm:block">Certificación</a>
-        <a href="#contacto" class="hidden md:block sm:block">Contacto</a>
+<header class="relative w-full py-5 z-20">
+    <div class="max-w-[1120px] mx-auto flex justify-center items-center relative">
+        <nav class="flex flex-row gap-x-10 opacity-80 text-center">
+    <a href="#top" class="hidden md:block sm:block"><span data-lang="es">Inicio</span><span data-lang="en" class="hidden">Home</span></a>
+    <a href="#experiencia" class="hidden md:block sm:block"><span data-lang="es">Experiencia</span><span data-lang="en" class="hidden">Experience</span></a>
+    <a href="#proyectos" class="hidden md:block sm:block"><span data-lang="es">Proyectos</span><span data-lang="en" class="hidden">Projects</span></a>
+    <a href="#sobre-mi" class="hidden md:block sm:block "><span data-lang="es">Sobre mí</span><span data-lang="en" class="hidden">About me</span></a>
+    <a href="#skills" class="hidden md:block sm:block"><span data-lang="es">Skills</span><span data-lang="en" class="hidden">Skills</span></a>
+    <a href="#certificate" class="hidden md:block sm:block"><span data-lang="es">Certificación</span><span data-lang="en" class="hidden">Certification</span></a>
+    <a href="#contacto" class="hidden md:block sm:block"><span data-lang="es">Contacto</span><span data-lang="en" class="hidden">Contact</span></a>
         <a
             href="https://www.instagram.com/thegatosamurai/"
             class="hidden md:block sm:block transition-transform duration-200 hover:scale-110 active:scale-95"
@@ -41,7 +43,26 @@ import Facebook from '../components/icon/Facebook.astro';
             >
             <Instagram class="sm:size-5  md:size-10 fill-current" />
         </a>
-    </nav>
+        </nav>
+        <div class="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2">
+            <LanguageToggle />
+        </div>
+    </div>
 </header>
 
-</div>
+<script>
+    // Sync visibility of elements that use data-lang with document.documentElement.dataset.lang
+    (function(){
+        const root = document.documentElement;
+        function applyLang(){
+            const lang = root.dataset.lang || 'es';
+            document.querySelectorAll('[data-lang]').forEach(el => {
+                el.classList.toggle('hidden', el.getAttribute('data-lang') !== lang);
+            });
+        }
+        applyLang();
+        const obs = new MutationObserver(() => applyLang());
+        obs.observe(root, { attributes: true, attributeFilter: ['data-lang'] });
+        document.addEventListener('DOMContentLoaded', applyLang);
+    })();
+</script>

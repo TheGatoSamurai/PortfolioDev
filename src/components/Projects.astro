@@ -15,7 +15,9 @@ import FireBase from './icon/Firebase.astro';
 import Python from './icon/Python.astro';
 import Node from './icon/Node.astro';
 import Discord from './icon/Discord.astro';
-
+import React from './icon/React.astro';
+import SqLite from './icon/SqLite.astro';
+import LanguageToggle from './LanguageToggle.astro';
 
 const TAGS = {
     HTML: {
@@ -92,53 +94,84 @@ const TAGS = {
       name: "Discord",
       class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-blue-500 to-purple-600 group-hover:from-blue-500 group-hover:to-purple-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-200",
       icon: Discord,
+    },
+    React:{
+      name: "React",
+      class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200",
+      icon: React,
+    },
+    SqLite:{
+      name: "SQLite",
+      class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200",
+      icon: SqLite,
     }
 
 };
 const CARD_DATA = [
   {
-	title: "Cat Shop",
-	description: "Ejemplo de tienda de mascotas con un carrito de compras",
-	image: "/images/Weba.webp",
-	tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScript, TAGS.Bootstrap],
-  link:"https://github.com/TheGatoSamurai/Experiencia1__PROGRAMACION-WEB_002V",
+    title_es: "Cat Shop",
+    title_en: "Cat Shop",
+    description_es: "Ejemplo de tienda de mascotas con un carrito de compras",
+    description_en: "Sample pet shop with a shopping cart",
+    image: "/images/Weba.webp",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScript, TAGS.Bootstrap],
+    link:"https://github.com/TheGatoSamurai/Experiencia1__PROGRAMACION-WEB_002V",
 
   },
   {
-	title: "App QR",
-	description: "App en Angular y Ionic para generar codigos QR con un formulario de contacto",
-	image: "/images/QR.png",
-	tags: [TAGS.HTML, TAGS.Angular, TAGS.Ionic, TAGS.Typescript, TAGS.JavaScript],
-  link:"https://github.com/TheGatoSamurai/TuClaseQR_008v",
+    title_es: "App QR",
+    title_en: "QR App",
+    description_es: "App en Angular y Ionic para generar codigos QR con un formulario de contacto",
+    description_en: "Angular + Ionic app to generate QR codes with a contact form",
+    image: "/images/QR.png",
+    tags: [TAGS.HTML, TAGS.Angular, TAGS.Ionic, TAGS.Typescript, TAGS.JavaScript],
+    link:"https://github.com/TheGatoSamurai/TuClaseQR_008v",
 
   },
   {
-  title: "Sun y Neko",
-  description: "Tienda de ropa con un diseño minimalista y elegante usando el diseño de la marca Sun y Neko",
+  title_es: "Sun y Neko",
+  title_en: "Sun y Neko",
+  description_es: "Tienda de ropa con un diseño minimalista y elegante usando el diseño de la marca Sun y Neko",
+  description_en: "Clothing store with a minimalist, elegant design for the Sun y Neko brand",
   image: "/images/Sunyneko.png",
   tags: [TAGS.Shopify ,TAGS.HTML, TAGS.CSS, TAGS.JavaScript ],
   link:"https://www.sunyneko.cl/",
   },
   {
-  title: "Web de Iglesia",
-  description: "Desarrollando: Web de iglesia, basada en astro y tailwind",
+  title_es: "Web de Iglesia",
+  title_en: "Church Website",
+  description_es: "Desarrollando: Web de iglesia, basada en astro y tailwind",
+  description_en: "In development: church website built with Astro and Tailwind",
   image: "/images/AET.png",
   tags: [TAGS.HTML, TAGS.IconAstro, TAGS.IconTailwind, TAGS.JavaScript],
   },
   {
-  title: "Easy OCR Reader",
-  description: "Una herramienta simple para aplicar OCR (Reconocimiento Óptico de Caracteres).",
+  title_es: "Easy OCR Reader",
+  title_en: "Easy OCR Reader",
+  description_es: "Una herramienta simple para aplicar OCR (Reconocimiento Óptico de Caracteres).",
+  description_en: "A simple tool to perform OCR (Optical Character Recognition).",
   image: "/images/OCR.png",
   link: "https://github.com/TheGatoSamurai/EasyOCR-Reader",
   tags: [TAGS.Python, TAGS.JavaScript],
   },
   {
-  title: "BotNeko",
-  description: "Un bot de Discord para gestionar mi servidor personal.",
+  title_es: "BotNeko",
+  title_en: "BotNeko",
+  description_es: "Un bot de Discord para gestionar mi servidor personal.",
+  description_en: "A Discord bot to manage my personal server.",
   image: "/images/BotNeko.png",
   tags: [TAGS.JavaScript, TAGS.Node, TAGS.Discord],
   link:"https://github.com/TheGatoSamurai/BotNeko",
   }
+  ,
+{title_es: "Sistema de Reservas",
+  title_en: "Booking System",
+  description_es: "Sistema de reservas para gestionar citas y disponibilidad.",
+  description_en: "Booking system to manage appointments and availability.",
+  image: "/images/Reservas.png",
+  tags: [TAGS.HTML, TAGS.IconAstro, TAGS.IconTailwind, TAGS.React, TAGS.JavaScript, TAGS.Node, TAGS.SqLite],
+  link:"https://github.com/TheGatoSamurai/SistemadeReserva",
+}
 ]
 
 ---
@@ -148,6 +181,3 @@ const CARD_DATA = [
     <ProjectItem {...card} />
   ))}
 </container>
-
-
-

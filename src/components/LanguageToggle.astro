@@ -1,0 +1,38 @@
+---
+---
+<button id="lang-toggle" aria-label="Toggle language" class="px-3 py-1 rounded-md bg-purple-600 text-white text-sm hover:opacity-90 transition">
+  ES
+</button>
+
+<script>
+// Client-side language toggle. Stores preference in localStorage and sets document.documentElement.dataset.lang
+(function () {
+  const KEY = 'site-lang';
+  /** @type {HTMLButtonElement | null} */
+  const btn = /** @type {HTMLButtonElement | null} */ (document.getElementById('lang-toggle'));
+  if (!btn) return;
+  const root = document.documentElement;
+  function getLang() {
+    return localStorage.getItem(KEY) || 'es';
+  }
+  /**
+   * Toggle the language value and update UI (no params to avoid implicit any)
+   */
+  function toggleLang() {
+    const next = root.dataset.lang === 'en' ? 'es' : 'en';
+    localStorage.setItem(KEY, next);
+    root.dataset.lang = next;
+    updateButton();
+  }
+  function updateButton() {
+    btn!.textContent = root.dataset.lang === 'en' ? 'EN' : 'ES';
+  }
+  // Initialize
+  root.dataset.lang = getLang();
+  // Set text immediately (button exists in template)
+  updateButton();
+  btn.addEventListener('click', () => {
+    toggleLang();
+  });
+})();
+</script>

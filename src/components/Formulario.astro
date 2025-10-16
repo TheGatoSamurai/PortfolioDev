@@ -1,26 +1,26 @@
 <form id="form" class="max-w-sm mx-auto" onsubmit="return validateForm(event)">
-	<h3 class="text-center text-yellow-400/80 text-lg font-extrabold py-4 ">Enviame un correo</h3>
+	<h3 data-i18n="heading" class="text-center text-yellow-400/80 text-lg font-extrabold py-4 "></h3>
 	<div class="field mb-5 flow-root ">
-	  <label for="nombre" class="block mb-2 text-base font-medium text-gray-300">Nombre</label>
+	<label for="nombre" data-i18n="labelName" class="block mb-2 text-base font-medium text-gray-300"></label>
 	  <div class="field relative"> 
 	  <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
 		<svg  class="w-4 h-4 text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-users">
 		<path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /><path d="M21 21v-2a4 4 0 0 0 -3 -3.85" /></svg>
 		</div>
-	  <input type="text" name="nombre" id="nombre" class="bg-blue-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5" placeholder="Ingresa tu nombre">
+	<input type="text" name="nombre" id="nombre" data-placeholder-key="placeholderName" class="bg-blue-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5" placeholder="Ingresa tu nombre">
 	</div>
 	</div>
 	<div class="field mb-5 flow-root ">
-	  <label for="subject" class="block mb-2 text-base font-medium text-gray-300">Asunto</label>
+	<label for="subject" data-i18n="labelSubject" class="block mb-2 text-base font-medium text-gray-300"></label>
 	  	<div class="field relative">
 			<div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
 			<svg class="w-4 h-4 text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-droplet-question"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.064 10.877l-4.89 -7.26c-.42 -.625 -1.287 -.803 -1.936 -.397a1.376 1.376 0 0 0 -.41 .397l-4.893 7.26c-1.695 2.838 -1.035 6.441 1.567 8.546c2.203 1.782 5.259 2.056 7.723 .82" /><path d="M19 22v.01" /><path d="M19 19a2.003 2.003 0 0 0 .914 -3.782a1.98 1.98 0 0 0 -2.414 .483" /></svg>
 			</div>
-			<input type="text" name="subject" id="subject" class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5" placeholder="Asunto">
+			<input type="text" name="subject" id="subject" data-placeholder-key="placeholderSubject" class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5" placeholder="Asunto">
 		</div>
 	</div>
 	<div class="field mb-5 flow-root ">
-	  <label for="email" class="block mb-2 text-base font-medium text-gray-300">Tu Email</label>
+	<label for="email" data-i18n="labelEmail" class="block mb-2 text-base font-medium text-gray-300"></label>
 	  <div class="field relative">
     	<div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
       		<svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
@@ -28,43 +28,111 @@
     		<path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
       		</svg>
     	</div>
-	  <input type="email" name="email" id="email" class="mb-2 bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5" placeholder="nombre@email.com">
+	<input type="email" name="email" id="email" data-placeholder-key="placeholderEmail" class="mb-2 bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5" placeholder="nombre@email.com">
 	</div>
 	<div class="field mb-5 flow-root ">
-	  <label for="telefono" class="block mb-2 text-base font-medium text-gray-300">Teléfono</label>
+	<label for="telefono" data-i18n="labelPhone" class="block mb-2 text-base font-medium text-gray-300"></label>
 	  <div class="field relative">
     	<div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
       		<svg class="w-4 h-4 text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.95.684l1.518 4.554a1 1 0 01-.217.976l-2.1 2.1a11.042 11.042 0 005.516 5.516l2.1-2.1a1 1 0 01.976-.217l4.554 1.518A1 1 0 0121 17.72V21a2 2 0 01-2 2h-1C9.163 23 1 14.837 1 5V4a2 2 0 012-2z" /></svg>
     	</div>
-	  <input type="tel" name="telefono" id="telefono" class="mb-2 bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5" placeholder="Ej: +56912345678" pattern="^\+?\d{8,15}$">
+	<input type="tel" name="telefono" id="telefono" data-placeholder-key="placeholderPhone" class="mb-2 bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5" placeholder="Ej: +56912345678" pattern="^\+?\d{8,15}$">
 	</div>
 	</div>
 	<div class="field mb-5 flow-root ">
-	  <label for="coments" class="block mb-2 text-base font-medium text-gray-300">Comentario</label>
+	<label for="coments" data-i18n="labelComment" class="block mb-2 text-base font-medium text-gray-300"></label>
 	  <div class="field relative">
 	  <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
 	  <svg class="w-6 h-6 text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-bubble-text"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10h10" /><path d="M9 14h5" /><path d="M12.4 3a5.34 5.34 0 0 1 4.906 3.239a5.333 5.333 0 0 1 -1.195 10.6a4.26 4.26 0 0 1 -5.28 1.863l-3.831 2.298v-3.134a2.668 2.668 0 0 1 -1.795 -3.773a4.8 4.8 0 0 1 2.908 -8.933a5.33 5.33 0 0 1 4.287 -2.16" /></svg>
 	</div>
-	  <textarea name="coments" id="coments" class="ps-10 text-sm block w-full p-4 text-gray-900 border border-gray-300 rounded-lg  bg-gray-50  focus:ring-blue-500 focus:border-blue-500 placeholder-gray-400 " placeholder="Deja un Comentario" required></textarea>
+	<textarea name="coments" id="coments" data-placeholder-key="placeholderComment" class="ps-10 text-sm block w-full p-4 text-gray-900 border border-gray-300 rounded-lg  bg-gray-50  focus:ring-blue-500 focus:border-blue-500 placeholder-gray-400 " placeholder="Deja un Comentario" required></textarea>
 	</div>
 	</div>
-	<div id="form-error" class="text-red-500 text-center mb-2 hidden">Debes ingresar un email válido o un número de teléfono válido.</div>
+	<div id="form-error" data-i18n="errorInvalid" class="text-red-500 text-center mb-2 hidden"></div>
 	<div class="field mb-5 py-6 content-center place-items-center gap-1 mx-1 flex flex-wrap justify-center ">
-	<input type="submit" id="button" value="Enviar" class="py-3 mb-3  text-white items-center bg-orange-700/80 hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 text-center">
+	<input type="submit" id="button" value="E" class="py-3 mb-3  text-white items-center bg-orange-700/80 hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 text-center">
 	</div>  
 </form>
 
 
 
 
-<script src="../components/EmailJs.js"></script>
-<script type="text/javascript" is:inline
-  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+	(function(){
+		// initialize EmailJS SDK with public key
+		try { emailjs.init({ publicKey: 'tK8UViD9d3Md7C_7T' }); } catch(e) { console.warn('emailjs.init failed', e); }
+	})();
 </script>
+<script src="../components/EmailJs.js"></script>
+
 <script type="text/javascript" is:inline>
-	emailjs.init('tK8UViD9d3Md7C_7T')
+	// Translation map (EN/ES)
+	const T = {
+		es: {
+			heading: 'Enviame un correo',
+			labelName: 'Nombre',
+			labelSubject: 'Asunto',
+			labelEmail: 'Tu Email',
+			labelPhone: 'Teléfono',
+			labelComment: 'Comentario',
+			placeholderName: 'Ingresa tu nombre',
+			placeholderSubject: 'Asunto',
+			placeholderEmail: 'nombre@email.com',
+			placeholderPhone: 'Ej: +56912345678',
+			placeholderComment: 'Deja un Comentario',
+			errorInvalid: 'Debes ingresar un email válido o un número de teléfono válido.',
+			errorRequired: 'El campo Comentario es obligatorio.',
+			send: 'Enviar',
+			sending: 'Enviando...',
+			sent: 'Enviado'
+		},
+		en: {
+			heading: 'Send me an email',
+			labelName: 'Name',
+			labelSubject: 'Subject',
+			labelEmail: 'Your Email',
+			labelPhone: 'Phone',
+			labelComment: 'Comment',
+			placeholderName: 'Enter your name',
+			placeholderSubject: 'Subject',
+			placeholderEmail: 'name@email.com',
+			placeholderPhone: 'E.g. +1234567890',
+			placeholderComment: 'Leave a comment',
+			errorInvalid: 'Please enter a valid email or a valid phone number.',
+			errorRequired: 'The Comment field is required.',
+			send: 'Send',
+			sending: 'Sending...',
+			sent: 'Sent'
+		}
+	};
+
+	function applyTranslations() {
+		const root = document.documentElement;
+		const lang = root.dataset.lang || 'es';
+		const map = T[lang] || T.es;
+		document.querySelectorAll('[data-i18n]').forEach(el => {
+			const key = el.getAttribute('data-i18n');
+			if (key && map[key]) el.textContent = map[key];
+		});
+		document.querySelectorAll('[data-placeholder-key]').forEach(inp => {
+			const key = inp.getAttribute('data-placeholder-key');
+			if (key && map[key]) inp.placeholder = map[key];
+		});
+		const btn = document.getElementById('button');
+		if (btn) btn.value = (map.send || 'Enviar');
+		const err = document.getElementById('form-error');
+		if (err) { err.classList.add('hidden'); err.textContent = '' }
+	}
+
+	applyTranslations();
+	const root = document.documentElement;
+	const obs = new MutationObserver(() => applyTranslations());
+	obs.observe(root, { attributes: true, attributeFilter: ['data-lang'] });
+
 	function setFieldError(id, hasError) {
 		const field = document.getElementById(id);
+		if (!field) return;
 		if (hasError) {
 			field.classList.add('border-red-500');
 			field.setAttribute('aria-invalid', 'true');
@@ -73,6 +141,7 @@
 			field.removeAttribute('aria-invalid');
 		}
 	}
+
 	function validateForm(event) {
 		event.preventDefault();
 		const email = document.getElementById('email').value.trim();
@@ -80,6 +149,8 @@
 		const coments = document.getElementById('coments').value.trim();
 		const errorDiv = document.getElementById('form-error');
 		const btn = document.getElementById('button');
+		const lang = document.documentElement.dataset.lang || 'es';
+		const map = T[lang] || T.es;
 		let valid = true;
 		const emailValid = email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 		const telValid = telefono && /^\+?\d{8,15}$/.test(telefono);
@@ -88,36 +159,51 @@
 		setFieldError('coments', !coments);
 		if (!(emailValid || telValid)) {
 			errorDiv.classList.remove('hidden');
-			errorDiv.textContent = 'Debes ingresar un email válido o un número de teléfono válido.';
+			errorDiv.textContent = map.errorInvalid;
 			valid = false;
 		}
 		if (!coments) {
 			errorDiv.classList.remove('hidden');
-			errorDiv.textContent = 'El campo Comentario es obligatorio.';
+			errorDiv.textContent = map.errorRequired;
 			valid = false;
 		}
 		if (!valid) {
 			btn.disabled = false;
-			btn.value = 'Enviar';
+			btn.value = map.send;
 			return false;
 		}
 		errorDiv.classList.add('hidden');
 		btn.disabled = true;
-		btn.value = 'Enviando...';
-		// Spinner visual
+		btn.value = map.sending;
 		btn.insertAdjacentHTML('beforeend', '<span id="spinner" class="ml-2 animate-spin inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full"></span>');
-		window.sendEmail(event.target, btn);
+		// Keep existing sendEmail flow in EmailJs.js which uses emailjs.sendForm
+		if (typeof window.sendEmail === 'function') {
+			window.sendEmail(event.target, btn);
+		} else {
+			console.warn('sendEmail not defined');
+			alert(map.errorRequired || 'Error');
+			btn.disabled = false;
+			btn.value = map.send;
+			const spinner = document.getElementById('spinner'); if (spinner) spinner.remove();
+		}
 		return false;
 	}
-	// Limpiar formulario y feedback tras envío exitoso
+
 	window.addEventListener('messageSent', function() {
-		document.getElementById('form').reset();
-		document.getElementById('button').disabled = false;
-		document.getElementById('button').value = 'Enviar';
+		const form = document.getElementById('form');
+		if (form) form.reset();
+		const btn = document.getElementById('button');
+		const lang = document.documentElement.dataset.lang || 'es';
+		const map = T[lang] || T.es;
+		if (btn) {
+			btn.disabled = false;
+			btn.value = map.send;
+		}
 		const spinner = document.getElementById('spinner');
 		if (spinner) spinner.remove();
 		setFieldError('email', false);
 		setFieldError('telefono', false);
 		setFieldError('coments', false);
 	});
+
 </script>

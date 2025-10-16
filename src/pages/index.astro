@@ -38,20 +38,23 @@ import Trabajemos from '../components/Trabajemos.astro';
 			<Typing /> 
 			</h1>
 			<a href="https://www.linkedin.com/in/thegatosamurai/"
-			target="_blank"
-			rel="noopener" 
-			class="flex items-center flex-wrap justify-end">
-			<Badge class="text-start flex text-wrap flex-row"></a>
-		<h2 class="lg:text-3xl sm:text-2xl text-wrap ">
-			<span class="opacity-90 text-yellow-300/80">
-				 Desarrollador Web y Creación de Proyectos.</span> 
-				</h2>
-				<p class="mt-0 lg:text-3xl sm:text-2xl text-wrap ">
-					<span>con +3 años de experiencia, </span><span class="opacity-90 text-gray-400/80 ">de Santiago, Chile.</span>
-				</p>
-				<h2 class="lg:text-3xl sm:text-2xl text-wrap ">
-				<span class="opacity-75"> Especializado en Creación de webs únicas.</span>
-		</h2>
+			   target="_blank"
+			   rel="noopener"
+			   class="flex items-center flex-wrap justify-end">
+				<Badge class="text-start flex text-wrap flex-row" />
+			</a>
+			<h2 class="lg:text-3xl sm:text-2xl text-wrap ">
+				<span data-lang="es" class="opacity-90 text-yellow-300/80">Desarrollador Web y Creación de Proyectos.</span>
+				<span data-lang="en" class="opacity-90 text-yellow-300/80">Web Developer and Project Creation.</span>
+			</h2>
+			<p class="mt-0 lg:text-3xl sm:text-2xl text-wrap ">
+				<span data-lang="es" class="opacity-90 text-gray-400/80">Con +3 años de experiencia, de Santiago, Chile.</span>
+				<span data-lang="en" class="opacity-90 text-gray-400/80">With 3+ years of experience, based in Santiago, Chile.</span>
+			</p>
+			<h2 class="lg:text-3xl sm:text-2xl text-wrap ">
+				<span data-lang="es" class="opacity-75">Especializado en creación de webs únicas.</span>
+				<span data-lang="en" class="opacity-75">Specialized in creating unique websites.</span>
+			</h2>
 			<nav class="flex gap-4 mt-8 flex-wrap md:items-center md:text-center">
 				<SocialPill href="https://www.linkedin.com/in/thegatosamurai/">
 				<LinkeindIcon class="size-7 md:size-6 lg:size-8 xl:size-10 "/>Linkedin
@@ -59,24 +62,35 @@ import Trabajemos from '../components/Trabajemos.astro';
 				<SocialPill href="https://github.com/TheGatoSamurai">
 				<GitHubIcon class="size-7 lg:size-8 xl:size-10"/>GitHub
 				</SocialPill>
-				<SocialPill Link href="https://drive.google.com/file/d/1DNgeZ-v1IMab-qXCdTID0KmhH62o8gr0/view?usp=sharing">
-				<CvIcon class="size-7 lg:size-8 xl:size-10"/>Descargar CV
+				<!-- CV links: Spanish CV (Drive) and English CV (separate link). Each SocialPill shows only when its data-lang matches -->
+				<SocialPill Link data-lang="es" href="https://drive.google.com/file/d/1DNgeZ-v1IMab-qXCdTID0KmhH62o8gr0/view?usp=sharing">
+					<CvIcon class="size-7 lg:size-8 xl:size-10"/>
+					Descargar CV
+				</SocialPill>
+				<SocialPill Link data-lang="en" href="https://drive.google.com/file/d/1l-QhKV-2TH2fu-Bq1WSXben6vhgKfQx0/view?usp=sharing">
+					<CvIcon class="size-7 lg:size-8 xl:size-10"/>
+					Download CV
 				</SocialPill>
 				<SocialPill Link href="mailto:thegatosamurai@gmail.com">
-				<MailIcon class="size-7 lg:size-8 xl:size-10"/>¡Enviame un email!
+					<MailIcon class="size-7 lg:size-8 xl:size-10"/>
+					<span data-lang="es">¡Enviame un email!</span>
+					<span data-lang="en">Send me an email</span>
 				</SocialPill>
 			</nav>
 	</SectionContainer>
 	<SectionContainer id="experiencia" >
 		<h2 class="text-xl 2xl:pt-20 lg:text-2xl 2xl:text-3xl text-wrap max-w-[750px] font-semibold mb-6  flex gap-x-3 items-center">
 			<BriefCaseIcon class="size-7 lg:size-8 xl:size-10"/>
-			Experiencia Laboral</h2>
+			<span data-lang="es">Experiencia Laboral</span>
+			<span data-lang="en">Work Experience</span>
+		</h2>
 		<Experience/>
 	</SectionContainer>
 	<SectionContainer id="proyectos" class=" py-12 pb-24 " >
 		<h2 class="text-xl  lg:text-2xl 2xl:text-3xl text-wrap max-w-[750px] font-semibold mb-6  flex gap-x-3 items-center justify-items-center" >
 			<CodeIcon class="size-7 lg:size-9 xl:size-10"/>
-			Proyectos
+			<span data-lang="es">Proyectos</span>
+			<span data-lang="en">Projects</span>
 		</h2>
 		<Projects class="max-w-xs"/>
 	</SectionContainer>
@@ -86,7 +100,8 @@ import Trabajemos from '../components/Trabajemos.astro';
 	<SectionContainer id="sobre-mi" class="py-10 pb-24">
 		<h2 class="text-xl  lg:text-2xl 2xl:text-3xl text-wrap max-w-[750px] font-semibold mb-6  flex gap-x-3 items-center" >
 			<AmongIcon class="size-7 lg:size-8 xl:size-11"/>
-			Sobre mí
+			<span data-lang="es">Sobre mí</span>
+			<span data-lang="en">About me</span>
 		</h2>
 				<div class="aspect-auto flex justify-center items-center max-w-[750px] mx-auto">
 					<ImagenFoto />
@@ -96,21 +111,24 @@ import Trabajemos from '../components/Trabajemos.astro';
 	<SectionContainer id="skills" class="py-22 pb-24">
 		<h2 class="text-xl lg:text-2xl 2xl:text-3xl text-wrap max-w-[750px] font-semibold mb-6  flex gap-x-3 items-center" >
 			<SkillsIcon class="size-7 lg:size-8 xl:size-11"/>
-			Skills
+			<span data-lang="es">Habilidades</span>
+			<span data-lang="en">Skills</span>
 		</h2>
 		<Skills/>
 	</SectionContainer>
 	<SectionContainer id="certificate" class="py-18 pb-24">
 		<h2 class="text-xl lg:text-2xl  2xl:text-3xltext-wrap max-w-[750px] font-semibold mb-6  flex gap-x-3 items-center" >
 			<CertificateIcon class="size-7 lg:size-8 xl:size-11"/>
-			Certificación
+			<span data-lang="es">Certificación</span>
+			<span data-lang="en">Certification</span>
 		</h2>
 		<Certificacion />
 	</SectionContainer>
 	<SectionContainer id="contacto" class="py-18 pb-24 ">
 		<h2 class="text-xl lg:text-2xl 2xl:text-3xl text-wrap max-w-[750px] font-semibold mb-6  flex gap-x-3 items-center" >
 			<ContactIcon class="size-7 lg:size-8 xl:size-11"/>
-			Contactame
+			<span data-lang="es">Contáctame</span>
+			<span data-lang="en">Contact me</span>
 		</h2>
 		<Formulario class="text-wrap max-w-[750px]"/>
 	</SectionContainer>

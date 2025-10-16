@@ -1,29 +1,36 @@
 ---
-
 export interface Props {
-  title: string;
-  description: string;
+  title_es?: string;
+  title_en?: string;
+  description_es?: string;
+  description_en?: string;
   image: string;
   tags: {
     name: string;
     class: string;
-    icon: any; // Cambia a un tipo más específico si sabes el tipo exacto del icono
+    icon: any;
   }[];
-  link?: string; // Opcional
+  link?: string;
 }
-const { title, description ,image, tags, link} = Astro.props;
+const { title_es, title_en, description_es, description_en, image, tags, link} = Astro.props;
 ---
 
 <container class="gap-3 order-first justify-start py-2 flex mx-3 flex-wrap flex-row ">
 <div class="mx-2 shadow-xl shadow-purple-800/30 text-wrap flex space-x-2 flex-wrap overflow-hidden gap-3 rounded-2xl  max-w-xs bg-gradient bg-gradient-to-l from-purple-600/50 to-blue-800/40 bg-clip-padding">
   <a href={link}>
-      <img class="flex-row object-cover h-auto rounded-t-lg blur-[0.3px]"  src={image} alt={title} />
+    <img class="flex-row object-cover h-auto rounded-t-lg blur-[0.3px]"  src={image} alt={title_es ?? title_en ?? 'Project'} />
   </a>
   <div class="mx-3 flex-wrap flex flex-row">
       <a href={link}>
-          <h2 class="text-2xl tracking-tight opacity-90 box-decoration-slice font-semibold text-yellow-400 px-2 text-center mx-24">{title}</h2>
-      </a>
-      <p class="mb-3 mx-4 list-none font-sans text-pretty  text-gray-300">{description}</p>
+              <h2 class="text-2xl tracking-tight opacity-90 box-decoration-slice font-semibold text-yellow-400 px-2 text-center mx-24">
+                <span data-lang="es">{title_es}</span>
+                <span data-lang="en">{title_en}</span>
+              </h2>
+          </a>
+          <p class="mb-3 mx-4 list-none font-sans text-pretty  text-gray-300">
+            <span data-lang="es">{description_es}</span>
+            <span data-lang="en">{description_en}</span>
+          </p>
       <div class="gap-1 mx-1 flex flex-wrap justify-center ">
         {tags.map(tag => (
           <div class={`relative px-1.5 py-1 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0 ${tag.class}`}>

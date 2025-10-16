@@ -16,6 +16,8 @@ const {description, title } = Astro.props;
 <!doctype html>
 <html lang="en">
 	<head>
+		<!-- Set preferred language early to avoid FOUT and ensure components read the right dataset -->
+		<script>document.documentElement.dataset.lang = (localStorage.getItem('site-lang') || 'es');</script>
 		<GoogleAnalytics />
 		<meta charset="UTF-8" />
 		<meta name={description} content={Astro.generator} />
