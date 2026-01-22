@@ -6,62 +6,64 @@ import Footer from './Footer.astro';
 import GoogleAnalytics from './GoogleAnalytics.astro';
 
 interface Props {
-	title: string;
-	description: string;
+    title: string;
+    description: string;
 }
 
-const {description, title } = Astro.props;
+const { description, title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<!-- Set preferred language early to avoid FOUT and ensure components read the right dataset -->
-		<script>document.documentElement.dataset.lang = (localStorage.getItem('site-lang') || 'es');</script>
-		<GoogleAnalytics />
-		<meta charset="UTF-8" />
-		<meta name={description} content={Astro.generator} />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/images/Favicon.png" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<meta property="og:title" content="Tu colaborador ideal ya existe. Thegatosamurai ⭐ Desarrollador y Programador web">
-		<meta property="og:description" content="No pierdas tiempo buscando más. Aquí encontrarás las habilidades y la creatividad que harán despegar tu proyecto. Explora mi portafolio y conoce lo que podemos crear juntos.">
-		<meta property="og:image" content="/images/Portafolio.png">
-		<meta property="og:url" content="https://www.thegatosamurai.dev/">
-		<meta property="og:type" content="website">
-	
-	</head>
-	<body class="px-4">
-		<div class="background"
-		>
-		</div>
-		<Header />
-		<slot />
-		<Footer/>
-	</body>
+<html lang="es"> <head>
+        <script is:inline>
+            // Agregué 'is:inline' para asegurar ejecución inmediata
+            document.documentElement.dataset.lang = (localStorage.getItem('site-lang') || 'es');
+        </script>
+        
+        <GoogleAnalytics />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/images/Favicon.png" />
+        <meta name="generator" content={Astro.generator} />
+
+        <title>{title}</title>
+        <meta name="description" content={description} />
+
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content="https://www.thegatosamurai.dev/images/Portafolio.png" />
+        
+        <meta property="og:url" content={Astro.url.href} />
+        <meta property="og:type" content="website">
+        
+    </head>
+    <body class="px-4">
+        <div class="background"></div>
+        <Header />
+        <slot />
+        <Footer/>
+    </body>
 </html>
 
 <style is:global>
-	:root {
-		color-scheme: dark;	
-	}
-	html {
-		scroll-behavior: smooth;
-		font-family:"Onest Variable", system-ui, sans-serif;
-	}
+    :root {
+        color-scheme: dark; 
+    }
+    html {
+        scroll-behavior: smooth;
+        font-family: "Onest Variable", system-ui, sans-serif;
+    }
 
-	body{
-		
-		background: #000;
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-		margin: 0;
-		position:relative;
-		
-	}
-	.background {
+    body{
+        background: #000;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+        position: relative;
+    }
+    
+    .background {
       position: fixed;
       top: 0;
       left: 0;
@@ -69,10 +71,11 @@ const {description, title } = Astro.props;
       height: 100%;
       z-index: -1;
       background: radial-gradient(125% 125% at 50% 10%, #000 40%, #63e 100%);
-	} 
+    } 
 
-	@media (prefers-reduced-motion: reduce) {
-		html{
-		scroll-behavior: auto;}
-	}
+    @media (prefers-reduced-motion: reduce) {
+        html {
+            scroll-behavior: auto;
+        }
+    }
 </style>
