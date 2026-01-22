@@ -109,16 +109,6 @@ const TAGS = {
 };
 const CARD_DATA = [
   {
-    title_es: "Cat Shop",
-    title_en: "Cat Shop",
-    description_es: "Ejemplo de tienda de mascotas con un carrito de compras",
-    description_en: "Sample pet shop with a shopping cart",
-    image: "/images/Weba.webp",
-    tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScript, TAGS.Bootstrap],
-    link:"https://github.com/TheGatoSamurai/Experiencia1__PROGRAMACION-WEB_002V",
-
-  },
-  {
     title_es: "App QR",
     title_en: "QR App",
     description_es: "App en Angular y Ionic para generar codigos QR con un formulario de contacto",
@@ -135,15 +125,6 @@ const CARD_DATA = [
   description_en: "Clothing store with a minimalist, elegant design for the Sun y Neko brand",
   image: "/images/Sunyneko.png",
   tags: [TAGS.Shopify ,TAGS.HTML, TAGS.CSS, TAGS.JavaScript ],
-  link:"https://www.sunyneko.cl/",
-  },
-  {
-  title_es: "Web de Iglesia",
-  title_en: "Church Website",
-  description_es: "Desarrollando: Web de iglesia, basada en astro y tailwind",
-  description_en: "In development: church website built with Astro and Tailwind",
-  image: "/images/AET.png",
-  tags: [TAGS.HTML, TAGS.IconAstro, TAGS.IconTailwind, TAGS.JavaScript],
   },
   {
   title_es: "Easy OCR Reader",
@@ -162,8 +143,7 @@ const CARD_DATA = [
   image: "/images/BotNeko.png",
   tags: [TAGS.JavaScript, TAGS.Node, TAGS.Discord],
   link:"https://github.com/TheGatoSamurai/BotNeko",
-  }
-  ,
+  },
 {title_es: "Sistema de Reservas",
   title_en: "Booking System",
   description_es: "Sistema de reservas para gestionar citas y disponibilidad.",
@@ -171,12 +151,38 @@ const CARD_DATA = [
   image: "/images/Reservas.png",
   tags: [TAGS.HTML, TAGS.IconAstro, TAGS.IconTailwind, TAGS.React, TAGS.JavaScript, TAGS.Node, TAGS.SqLite],
   link:"https://github.com/TheGatoSamurai/SistemadeReserva",
+},
+{
+  title_es: "Tótem de IA Interactivo",
+  title_en: "Interactive AI Totem",
+  description_es: "Asistente virtual modular con Python, visión artificial, LLMs y UI interactiva.",
+  description_en: "Modular virtual assistant with Python, computer vision, LLMs, and interactive UI.",
+  image: "/images/Lia.png",
+  tags: [TAGS.Python, TAGS.Node, TAGS.JavaScript, TAGS.React, TAGS.HTML],
+  link:"https://github.com/TheGatoSamurai/TotemAi",
+},
+{
+  title_es: "Desarrollador Web & Consultor E-commerce",
+  title_en: "Web Developer & E-commerce Consultant",
+  description_es: "Lanzamiento y configuración de tienda e-commerce en Shopify para el sector industrial. Migración de dominio, gestión DNS y capacitación al cliente.",
+  description_en: "Launched and configured a Shopify e-commerce store for an industrial client. Domain migration, DNS management, and client training.",
+  image: "/images/BGE.png",
+  tags: [TAGS.Shopify, TAGS.HTML, TAGS.CSS, TAGS.JavaScript],
+  link:"https://hojalateriabge.cl"
+},
+{
+  title_es: "Web de Iglesia",
+  title_en: "Church Website",
+  description_es: "Desarrollando: Web de iglesia, basada en astro y tailwind",
+  description_en: "In development: church website built with Astro and Tailwind",
+  image: "/images/AET.png",
+  tags: [TAGS.HTML, TAGS.IconAstro, TAGS.IconTailwind, TAGS.JavaScript],
+  link:"https://iglesiaahoraeseltiempo.cl"
 }
 ]
-
 ---
 
-<container class="flex flex-wrap justify-center gap-4">
+<container class="grid grid-cols-1 lg:grid-cols-2 gap-6 justify-items-center">
   {CARD_DATA.map((card) => (
     <ProjectItem {...card} />
   ))}
