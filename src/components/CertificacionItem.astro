@@ -4,23 +4,41 @@ export interface Props {
   description: string;
   image: string;
   date: string; 
-  link?: string; // Opcional
+  link?: string;
 }
-const { title, description, date,image, link} = Astro.props;
+const { title, description, date, image, link } = Astro.props;
 ---
-<div class="py-4  flow-root mx-4  flex-wrap justify-center  ">
-<a href={link} 
-class=" flex shadow-xl shadow-purple-800/30 mx-5 flex-col items-center  border-blue-700/10 rounded-lg  md:flex-row md:max-w-xlbg-gradient bg-gradient-to-l from-purple-600/50 to-blue-800/40 bg-clip-padding ">
-    <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg sm:max-w-sm" 
-    src={image} alt={title} >
-    <div class="flex flex-col justify-center p-4 leading-normal">
-        <h5 
-        class=" justify-center text-pretty mb-2 tracking-tight text-lg font-semibold text-yellow-400">
-        {title}</h5>
-        <p class="mx-1 text-sm text-pretty  text-gray-400 ">
-            {date}</p>
-        <p class="mx-1 font-normal  text-gray-300 text-pretty">
-            {description}</p>
-    </div>
-</a>
-</div>
+
+<article class="p-2">
+    <a href={link} target="_blank" rel="noopener noreferrer" 
+       class="group flex flex-col md:flex-row items-center bg-white/5 border border-white/10 rounded-2xl overflow-hidden shadow-lg hover:bg-white/10 hover:shadow-purple-900/20 hover:-translate-y-1 transition-all duration-300 h-full">
+        
+        <div class="w-full h-48 md:w-48 md:h-full shrink-0 overflow-hidden relative">
+            <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10"></div>
+            <img 
+                class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" 
+                src={image} 
+                alt={title} 
+            />
+        </div>
+
+        <div class="p-6 flex flex-col justify-center w-full">
+            <span class="text-xs font-mono text-blue-400 mb-2">{date}</span>
+            
+            <h3 class="text-xl font-bold text-yellow-400 mb-2 leading-tight group-hover:text-yellow-300">
+                {title}
+            </h3>
+            
+            <p class="text-gray-300 text-sm mb-4">
+                {description}
+            </p>
+
+            <div class="mt-auto flex items-center text-sm font-medium text-gray-400 group-hover:text-white transition-colors gap-2">
+                <span>Ver credencial</span>
+                <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden sm:block">
+                    <svg class="w-5 h-5 text-gray-400 group-hover:text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                </div>
+            </div>
+        </div>
+    </a>
+</article>

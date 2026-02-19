@@ -1,136 +1,112 @@
 ---
-import Badge from '../components/Badge.astro';
-import SectionContainer from '../components/SectionContainer.astro';
 import Layout from '../layouts/Layout.astro';
-import LinkeindIcon from '../components/icon/Linkedin.astro';
-import GitHubIcon from '../components/icon/GitHub.astro';
-import SocialPill from '../components/icon/SocialPill.astro';
-import MailIcon from '../components/icon/Mail.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import SectionContainer2 from '../components/SectionContainer2.astro'; 
+import Hero from '../components/Hero.astro'; 
 import Experience from '../components/Expirience.astro';
 import BriefCaseIcon from '../components/icon/BriefCase.astro';
 import CodeIcon from '../components/icon/Code.astro';
 import Projects from '../components/Projects.astro';
+import AboutMe from '../components/AboutMe.astro';
 import AmongIcon from '../components/icon/Among.astro';
 import ImagenFoto from '../components/Imagen.astro';
-import AboutMe from '../components/AboutMe.astro';
-import CvIcon from '../components/icon/Cv.astro';
-import CertificateIcon from '../components/icon/Certificate.astro';
-import ContactIcon from '../components/icon/Contact.astro';
-import Certificacion from '../components/Certificacion.astro';
-import Formulario from '../components/Formulario.astro';
-import SkillsIcon from '../components/icon/SkillsIcon.astro';
 import Skills from '../components/Skills.astro';
-import Typing from '../components/Typing.astro';
+import SkillsIcon from '../components/icon/SkillsIcon.astro';
+import Certificacion from '../components/Certificacion.astro';
+import CertificateIcon from '../components/icon/Certificate.astro';
+import Formulario from '../components/Formulario.astro';
 import Trabajemos from '../components/Trabajemos.astro';
-
-
+import ContactIcon from '../components/icon/Contact.astro';
 ---
 
-<Layout title="Gerald Quiñenao - TheGatoSamurai | Full Stack Dev & UX/UI"
-		description="Desarrollo sitios web rápidos y aplicaciones modernas con Astro y React. Diseño experiencias digitales únicas desde Santiago, Chile. ¡Hablemos!">
-	<main class="px-4">
-	<SectionContainer class="py-44 pb-24 2xl:flow-root 2xl:pt-64 sm:pt-40">
-	<img 
-    class="rounded-full size-7 md:size-9 lg:size-12 mb-4 flex-wrap justify-center"
-    src="/images/Portafolioblanco250.png"
-    alt="thegatosamurai">
-		<h1 class=" md:text-4xl lg:text-5xl sm:text-3xl  flex flex-row  lg:pb-10 2xl:text-7xl">
-			<Typing /> 
-			</h1>
-			<a href="https://www.linkedin.com/in/thegatosamurai/"
-			   target="_blank"
-			   rel="noopener"
-			   class="flex items-center flex-wrap justify-end">
-				<Badge class="text-start flex text-wrap flex-row" />
-			</a>
-			<h2 class="lg:text-3xl sm:text-2xl text-wrap ">
-				<span data-lang="es" class="opacity-90 text-yellow-300/80">Desarrollador Web y Creación de Proyectos.</span>
-				<span data-lang="en" class="opacity-90 text-yellow-300/80">Web Developer and Project Creation.</span>
-			</h2>
-			<p class="mt-0 lg:text-3xl sm:text-2xl text-wrap ">
-				<span data-lang="es" class="opacity-90 text-gray-400/80">Con +3 años de experiencia, de Santiago, Chile.</span>
-				<span data-lang="en" class="opacity-90 text-gray-400/80">With 3+ years of experience, based in Santiago, Chile.</span>
-			</p>
-			<h2 class="lg:text-3xl sm:text-2xl text-wrap ">
-				<span data-lang="es" class="opacity-75">Especializado en creación de webs únicas.</span>
-				<span data-lang="en" class="opacity-75">Specialized in creating unique websites.</span>
-			</h2>
-			<nav class="flex gap-4 mt-8 flex-wrap md:items-center md:text-center">
-				<SocialPill href="https://www.linkedin.com/in/thegatosamurai/">
-				<LinkeindIcon class="size-7 md:size-6 lg:size-8 xl:size-10 "/>Linkedin
-				</SocialPill>
-				<SocialPill href="https://github.com/TheGatoSamurai">
-				<GitHubIcon class="size-7 lg:size-8 xl:size-10"/>GitHub
-				</SocialPill>
-				<!-- CV links: Spanish CV (Drive) and English CV (separate link). Each SocialPill shows only when its data-lang matches -->
-				<SocialPill Link data-lang="es" href="https://drive.google.com/file/d/1a9BrDVxImUgBnnvBurDKEh84I-iA8eEe/view?usp=sharing">
-					<CvIcon class="size-7 lg:size-8 xl:size-10"/>
-					Descargar CV
-				</SocialPill>
-				<SocialPill Link data-lang="en" href="https://drive.google.com/file/d/1VlXzQLEWaSZDFvGX388eiQKNgOsh4RdV/view?usp=sharing">
-					<CvIcon class="size-7 lg:size-8 xl:size-10"/>
-					Download CV
-				</SocialPill>
-				<SocialPill Link href="mailto:thegatosamurai@gmail.com">
-					<MailIcon class="size-7 lg:size-8 xl:size-10"/>
-					<span data-lang="es">¡Enviame un email!</span>
-					<span data-lang="en">Send me an email</span>
-				</SocialPill>
-			</nav>
-	</SectionContainer>
-	<SectionContainer id="experiencia" >
-		<h2 class="text-xl 2xl:pt-20 lg:text-2xl 2xl:text-3xl text-wrap max-w-[750px] font-semibold mb-6  flex gap-x-3 items-center">
-			<BriefCaseIcon class="size-7 lg:size-8 xl:size-10"/>
-			<span data-lang="es">Experiencia Laboral</span>
-			<span data-lang="en">Work Experience</span>
-		</h2>
-		<Experience/>
-	</SectionContainer>
-	<SectionContainer id="proyectos" class=" py-12 pb-24 " >
-		<h2 class="text-xl  lg:text-2xl 2xl:text-3xl text-wrap max-w-[750px] font-semibold mb-6  flex gap-x-3 items-center justify-items-center" >
-			<CodeIcon class="size-7 lg:size-9 xl:size-10"/>
-			<span data-lang="es">Proyectos</span>
-			<span data-lang="en">Projects</span>
-		</h2>
-		<Projects class="max-w-xs"/>
-	</SectionContainer>
-	<SectionContainer class="py-10 pb-16">
-	<Trabajemos/>
-	</SectionContainer>
-	<SectionContainer id="sobre-mi" class="py-10 pb-24">
-		<h2 class="text-xl  lg:text-2xl 2xl:text-3xl text-wrap max-w-[750px] font-semibold mb-6  flex gap-x-3 items-center" >
-			<AmongIcon class="size-7 lg:size-8 xl:size-11"/>
-			<span data-lang="es">Sobre mí</span>
-			<span data-lang="en">About me</span>
-		</h2>
-				<div class="aspect-auto flex justify-center items-center max-w-[750px] mx-auto">
-					<ImagenFoto />
-				</div>
-		<AboutMe/>
-	</SectionContainer>
-	<SectionContainer id="skills" class="py-22 pb-24">
-		<h2 class="text-xl lg:text-2xl 2xl:text-3xl text-wrap max-w-[750px] font-semibold mb-6  flex gap-x-3 items-center" >
-			<SkillsIcon class="size-7 lg:size-8 xl:size-11"/>
-			<span data-lang="es">Habilidades</span>
-			<span data-lang="en">Skills</span>
-		</h2>
-		<Skills/>
-	</SectionContainer>
-	<SectionContainer id="certificate" class="py-18 pb-24">
-		<h2 class="text-xl lg:text-2xl  2xl:text-3xl text-wrap max-w-[750px] font-semibold mb-6  flex gap-x-3 items-center" >
-			<CertificateIcon class="size-7 lg:size-8 xl:size-11"/>
-			<span data-lang="es">Certificación</span>
-			<span data-lang="en">Certification</span>
-		</h2>
-		<Certificacion />
-	</SectionContainer>
-	<SectionContainer id="contacto" class="py-18 pb-24 ">
-		<h2 class="text-xl lg:text-2xl 2xl:text-3xl text-wrap max-w-[750px] font-semibold mb-6  flex gap-x-3 items-center" >
-			<ContactIcon class="size-7 lg:size-8 xl:size-11"/>
-			<span data-lang="es">Contáctame</span>
-			<span data-lang="en">Contact me</span>
-		</h2>
-		<Formulario class="text-wrap max-w-[750px]"/>
-	</SectionContainer>
-	</main>
+<Layout 
+    title="Gerald Quiñenao - Ingeniero & Full Stack Developer"
+    description="Portafolio profesional de Gerald Quiñenao. Especialista en desarrollo web, ciberseguridad y soluciones digitales.">
+    
+    <main> 
+        
+        <Hero />
+
+        <SectionContainer id="experiencia" class="py-20 md:py-32">
+            <h2 class="text-5xl md:text-6xl font-black text-white mb-12 flex items-center gap-4">
+                <BriefCaseIcon class="size-12 md:size-16 text-yellow-400"/>
+                <div>
+                    <span data-lang="es">Experiencia</span>
+                    <span data-lang="en" class="hidden">Experience</span>
+                </div>
+            </h2>
+            <Experience/>
+        </SectionContainer>
+
+        <SectionContainer2 id="proyectos" class="py-20 md:py-32">
+            <h2 class="text-5xl md:text-6xl font-black text-white mb-16 flex items-center gap-4 px-4 md:px-0">
+                <CodeIcon class="size-12 md:size-16 text-blue-500"/>
+                <div>
+                    <span data-lang="es">Proyectos</span>
+                    <span data-lang="en" class="hidden">Projects</span>
+                </div>
+            </h2>
+            <Projects/>
+        </SectionContainer2>
+
+        <SectionContainer2 id="sobre-mi" class="py-24 md:py-36">
+            <h2 class="text-5xl md:text-6xl font-black text-white mb-16 flex items-center gap-4 px-4 xl:px-0">
+                <AmongIcon class="size-12 md:size-16 text-yellow-400"/>
+                <div>
+                    <span data-lang="es">Sobre mí</span>
+                    <span data-lang="en" class="hidden">About me</span>
+                </div>
+            </h2>
+            
+            <div class="flex flex-col md:flex-row gap-10 md:gap-16 items-center bg-white/5 border border-white/10 rounded-[2.5rem] p-6 md:p-12 lg:p-16 shadow-2xl backdrop-blur-sm hover:bg-white/[0.07] transition-colors duration-500">
+                <div class="w-full md:w-2/5 flex justify-center md:justify-end">
+                    <div class="relative">
+                        <ImagenFoto /> 
+                    </div>
+                </div>
+                <div class="w-full md:w-3/5">
+                    <AboutMe/>
+                </div>
+            </div>
+        </SectionContainer2>
+
+        <SectionContainer2 id="skills" class="py-20 md:py-32">
+            <h2 class="text-5xl md:text-6xl font-black text-white mb-16 flex items-center justify-center md:justify-start gap-4">
+                <SkillsIcon class="size-12 md:size-16 text-green-400"/>
+                <div>
+                    <span data-lang="es">Habilidades</span>
+                    <span data-lang="en" class="hidden">Skills</span>
+                </div>
+            </h2>
+            <Skills/>
+        </SectionContainer2>
+
+        <SectionContainer2 id="certificate" class="py-20 md:py-32">
+            <h2 class="text-3xl sm:text-4xl md:text-6xl font-black text-white mb-16 flex items-center gap-4 px-4 md:px-0">
+                <CertificateIcon class="w-12 h-12 md:w-16 md:h-16 text-purple-400 shrink-0"/>
+                <div>
+                    <span data-lang="es">Certificaciones</span>
+                    <span data-lang="en" class="hidden">Certificates</span>
+                </div>
+            </h2>
+            <Certificacion />
+        </SectionContainer2>
+        
+        <div class="mt-20 md:mt-32 mb-10">
+            <Trabajemos />
+        </div>
+
+        <SectionContainer2 class="pt-20 md:pt-32">
+            <h2 class="text-3xl sm:text-4xl md:text-6xl font-black text-white mb-16 flex items-center gap-4 px-4 md:px-0">
+                <ContactIcon class="w-14 h-14 md:w-16 md:h-16 text-yellow-400"/>
+                <div>
+                    <span data-lang="es">Contáctame</span>
+                    <span data-lang="en" class="hidden">Contact me</span>
+                </div>
+            </h2>
+        </SectionContainer2>
+        <div class="pb-20">
+            <Formulario />
+        </div>
+    </main>
 </Layout>

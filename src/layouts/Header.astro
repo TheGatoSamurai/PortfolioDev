@@ -8,56 +8,126 @@ import Home from '../components/icon/Home.astro';
 import SkillsIcon from '../components/icon/SkillsIcon.astro';
 import Instagram from '../components/icon/Instagram.astro';
 import LanguageToggle from '../components/LanguageToggle.astro';
-import Facebook from '../components/icon/Facebook.astro';
+
+const navItems = [
+  { label: "inicio", url: "#top", Icon: Home, title_es: "Inicio", title_en: "Home" },
+  { label: "experiencia", url: "#experiencia", Icon: BriefCase, title_es: "Experiencia", title_en: "Experience" },
+  { label: "proyectos", url: "#proyectos", Icon: Code, title_es: "Proyectos", title_en: "Projects" },
+  { label: "sobre-mi", url: "#sobre-mi", Icon: Among, title_es: "Sobre mí", title_en: "About me" },
+  { label: "skills", url: "#skills", Icon: SkillsIcon, title_es: "Skills", title_en: "Skills" },
+  { label: "certificaciones", url: "#certificate", Icon: Certificate, title_es: "Certificación", title_en: "Certification" },
+  { label: "contacto", url: "#contacto", Icon: Contact, title_es: "Contacto", title_en: "Contact" },
+];
 ---
 
-<header class="relative w-full py-5 z-20">
-    <div class="max-w-[1120px] mx-auto flex justify-center items-center relative">
-        <nav class="flex flex-row gap-x-10 opacity-80 text-center">
-    <a href="#top" class="hidden md:block sm:block"><span data-lang="es">Inicio</span><span data-lang="en" class="hidden">Home</span></a>
-    <a href="#experiencia" class="hidden md:block sm:block"><span data-lang="es">Experiencia</span><span data-lang="en" class="hidden">Experience</span></a>
-    <a href="#proyectos" class="hidden md:block sm:block"><span data-lang="es">Proyectos</span><span data-lang="en" class="hidden">Projects</span></a>
-    <a href="#sobre-mi" class="hidden md:block sm:block "><span data-lang="es">Sobre mí</span><span data-lang="en" class="hidden">About me</span></a>
-    <a href="#skills" class="hidden md:block sm:block"><span data-lang="es">Skills</span><span data-lang="en" class="hidden">Skills</span></a>
-    <a href="#certificate" class="hidden md:block sm:block"><span data-lang="es">Certificación</span><span data-lang="en" class="hidden">Certification</span></a>
-    <a href="#contacto" class="hidden md:block sm:block"><span data-lang="es">Contacto</span><span data-lang="en" class="hidden">Contact</span></a>
-        <a
-            href="https://www.instagram.com/thegatosamurai/"
-            class="hidden md:block sm:block transition-transform duration-200 hover:scale-110 active:scale-95"
-            aria-label="Instagram"
-            >
-            <Instagram class="w-7 h-7 fill-current" />
-        </a>
-        <!--- Iconos para movil --->
-        <a href="#top" class="block md:hidden sm:hidden"><Home class=" sm:size-5  md:size-10"/></a>
-        <a href="#experiencia" class="block md:hidden sm:hidden"><BriefCase class="sm:size-5  md:size-10"/></a>
-        <a href="#proyectos" class="block md:hidden sm:hidden" ><Code class="sm:size-5  md:size-10"/></a>
-        <a href="#sobre-mi" class="block md:hidden sm:hidden"><Among class="sm:size-5  md:size-10"/></a>
-        <a href="#skills" class="block md:hidden sm:hidden"><SkillsIcon class="sm:size-5  md:size-10"/></a>
-        <a href="#certificate" class="block md:hidden sm:hidden"><Certificate class="sm:size-5  md:size-10"/></a>
-        <a href="#contacto" class="block md:hidden sm:hidden"><Contact class="sm:size-5  md:size-10"/></a>
-        <a
-            href="https://www.instagram.com/thegatosamurai/"
-            class="block md:hidden sm:hidden transition-transform duration-200 hover:scale-110 active:scale-95"
-            aria-label="Instagram"
-            >
-            <Instagram class="sm:size-5  md:size-10 fill-current" />
-        </a>
-        </nav>
-        <div class="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2">
-            <LanguageToggle />
+<header id="main-header" class="fixed top-0 left-0 right-0 z-50 flex justify-center w-full mt-4 px-2 md:px-6 transition-all duration-500">
+    
+    <nav id="nav-container" class="flex flex-col md:flex-row w-[95%] max-w-5xl p-2 md:px-4 md:py-2 text-sm md:text-base font-medium rounded-2xl bg-transparent border border-transparent items-center justify-between transition-all duration-300 md:rounded-full">
+        
+        <div class="flex flex-wrap justify-center md:justify-start items-center gap-1 w-full md:w-auto">
+            {
+                navItems.map((link) => (
+                    <a
+                        class="relative block px-2 py-2 md:px-3 transition-all rounded-full hover:bg-white/10 nav-item group"
+                        aria-label={link.label}
+                        href={link.url}
+                    >
+                        <span class="hidden md:block transition-colors group-hover:text-yellow-400">
+                            <span data-lang="es">{link.title_es}</span>
+                            <span data-lang="en" class="hidden">{link.title_en}</span>
+                        </span>
+                        <span class="block md:hidden transition-colors group-hover:text-yellow-400">
+                            <link.Icon class="size-5 sm:size-6" />
+                        </span>
+                    </a>
+                ))
+            }
         </div>
-    </div>
+
+        <div class="block md:hidden w-3/4 h-[1px] bg-white/10 my-1 mx-auto opacity-0 transition-opacity" id="mobile-separator"></div>
+
+        <div class="flex items-center justify-center gap-4 w-full md:w-auto pb-1 md:pb-0">
+            <div class="hidden md:block h-6 w-[1px] bg-white/20 mx-2"></div>
+            
+            <a
+                href="https://www.instagram.com/thegatosamurai/"
+                class="p-1.5 rounded-full hover:bg-white/10 transition-all duration-200 hover:scale-110 hover:text-pink-500 text-white/90"
+                aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <Instagram class="size-5 sm:size-6 fill-current" />
+            </a>
+            
+            <div class="lang-wrapper p-1 rounded-full hover:bg-white/10 transition-all flex items-center justify-center">
+                <LanguageToggle />
+            </div>
+        </div>
+    </nav>
 </header>
 
 <script>
-    // Sync visibility of elements that use data-lang with document.documentElement.dataset.lang
+    const header = document.getElementById('main-header');
+    const navContainer = document.getElementById('nav-container');
+    const mobileSeparator = document.getElementById('mobile-separator');
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
+
+        // Ocultar al bajar
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+            header?.classList.add('-translate-y-[200%]', 'opacity-0');
+        } else {
+            header?.classList.remove('-translate-y-[200%]', 'opacity-0');
+        }
+
+        // Fondo oscuro al hacer scroll
+        if (currentScrollY > 20) {
+            navContainer?.classList.remove('bg-transparent', 'border-transparent');
+            navContainer?.classList.add('bg-black/80', 'backdrop-blur-xl', 'border-white/10', 'shadow-2xl');
+            mobileSeparator?.classList.remove('opacity-0');
+        } else {
+            navContainer?.classList.add('bg-transparent', 'border-transparent');
+            navContainer?.classList.remove('bg-black/80', 'backdrop-blur-xl', 'border-white/10', 'shadow-2xl');
+             mobileSeparator?.classList.add('opacity-0');
+        }
+
+        lastScrollY = currentScrollY;
+    });
+
+    // Active Link
+    const sections = document.querySelectorAll("section");
+    const navItems = document.querySelectorAll("header nav a.nav-item");
+    const callback = (entries: any[]) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                navItems.forEach((item) => {
+                    if (item.getAttribute("aria-label") == entry.target.id) {
+                        item.classList.add("text-yellow-400", "bg-white/10");
+                        item.classList.remove("text-white/70");
+                    } else {
+                        item.classList.remove("text-yellow-400", "bg-white/10");
+                        item.classList.add("text-white/70");
+                    }
+                });
+            }
+        });
+    };
+    const observer = new IntersectionObserver(callback, { root: null, rootMargin: "0px", threshold: 0.25 });
+    sections.forEach((section) => observer.observe(section));
+
+    // Idiomas
     (function(){
         const root = document.documentElement;
         function applyLang(){
             const lang = root.dataset.lang || 'es';
             document.querySelectorAll('[data-lang]').forEach(el => {
-                el.classList.toggle('hidden', el.getAttribute('data-lang') !== lang);
+                if(el.getAttribute('data-lang') === lang) {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden');
+                }
             });
         }
         applyLang();
@@ -66,3 +136,16 @@ import Facebook from '../components/icon/Facebook.astro';
         document.addEventListener('DOMContentLoaded', applyLang);
     })();
 </script>
+
+<style is:global>
+    .lang-wrapper button, .lang-wrapper select {
+        background: transparent !important;
+        border: none !important;
+        color: rgba(255, 255, 255, 0.9) !important;
+        font-weight: 600;
+        cursor: pointer;
+        padding: 0.2rem 0.5rem;
+        font-size: 0.85rem;
+    }
+    .lang-wrapper option { background-color: #000; color: white; }
+</style>

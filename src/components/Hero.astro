@@ -1,0 +1,77 @@
+---
+import LinkeindIcon from './icon/Linkedin.astro';
+import GitHubIcon from './icon/GitHub.astro';
+import SocialPill from './icon/SocialPill.astro';
+import MailIcon from './icon/Mail.astro';
+import CvIcon from './icon/Cv.astro';
+import Typing from './Typing.astro';
+import Badge from './Badge.astro';
+---
+
+<section class="relative min-h-screen flex flex-col justify-center items-center text-center px-4 overflow-hidden pt-24 md:pt-0">
+    
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-blue-600/10 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+
+    <div class="relative mb-4 md:mb-6 mt-0 group flex flex-col items-center justify-center">
+        <div class="absolute inset-0 bg-gradient-to-tr from-yellow-500/20 to-purple-600/20 rounded-full blur-3xl opacity-40 group-hover:opacity-60 transition-opacity duration-500"></div>
+        
+        <img 
+            class="relative h-28 md:h-48 w-auto object-contain drop-shadow-2xl transition-transform duration-300 group-hover:scale-105 group-hover:rotate-1"
+            src="/images/Portafolioblanco250.png"
+            alt="Gerald Quiñenao Logo"
+        >
+        
+        <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 hover:scale-105 transition-transform cursor-pointer z-10">
+            <a href="https://www.linkedin.com/in/thegatosamurai/" target="_blank" rel="noopener">
+                <Badge />
+            </a>
+        </div>
+    </div>
+
+    <div class="mt-4 text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-4 relative z-10">
+        <Typing />
+    </div>
+
+    <h2 class="text-lg md:text-2xl lg:text-3xl font-bold text-white/90 text-wrap max-w-3xl mb-4 md:mb-8 leading-tight">
+        <span data-lang="es">Ingeniero en Informática & Full Stack Developer.</span>
+        <span data-lang="en" class="hidden">Computer Engineer & Full Stack Developer.</span>
+    </h2>
+
+    <p class="text-base md:text-xl text-gray-400 text-wrap max-w-2xl mb-8 md:mb-12 leading-relaxed font-light px-2">
+        <span data-lang="es">
+            +3 años creando soluciones en <strong class="text-yellow-300 font-medium">Desarrollo Web</strong> y <strong class="text-blue-400 font-medium">E-commerce</strong>. 
+            Transformo ideas complejas en sistemas seguros y escalables desde Santiago, Chile 🇨🇱.
+        </span>
+        <span data-lang="en" class="hidden">
+            +3 years building <strong class="text-yellow-300 font-medium">Web Development</strong> and <strong class="text-blue-400 font-medium">E-commerce</strong> solutions. 
+            I transform complex ideas into secure and scalable systems from Santiago, Chile 🇨🇱.
+        </span>
+    </p>
+
+    <nav class="flex gap-3 md:gap-4 flex-wrap justify-center w-full px-1">
+        <SocialPill href="https://www.linkedin.com/in/thegatosamurai/">
+            <LinkeindIcon class="size-5 md:size-6"/>
+            <span>LinkedIn</span>
+        </SocialPill>
+        
+        <SocialPill href="https://github.com/TheGatoSamurai">
+            <GitHubIcon class="size-5 md:size-6"/>
+            <span>GitHub</span>
+        </SocialPill>
+        
+        <SocialPill Link data-lang="es" href="https://drive.google.com/file/d/10FS5yEd3M81S0N-gbNimxIzOAEfxDb4j/view?usp=sharing">
+            <CvIcon class="size-5 md:size-6"/>
+            <span>CV</span>
+        </SocialPill>
+        <SocialPill Link data-lang="en" href="https://drive.google.com/file/d/1VlXzQLEWaSZDFvGX388eiQKNgOsh4RdV/view?usp=sharing">
+            <CvIcon class="size-5 md:size-6"/>
+            <span>CV</span>
+        </SocialPill>
+
+        <SocialPill Link href="mailto:thegatosamurai@gmail.com">
+            <MailIcon class="size-5 md:size-6"/>
+            <span>Email</span>
+        </SocialPill>
+    </nav>
+
+</section>

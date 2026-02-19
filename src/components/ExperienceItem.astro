@@ -1,50 +1,54 @@
 ---
 export interface Props {
-        tittle?: string
-        tittle_es?: string
-        tittle_en?: string
-        description?: string
-        description_es?: string
-        description_en?: string
-        link?: string
-        date?: string
+    title_es: string
+    title_en: string
+    description_es: string
+    description_en: string
+    link?: string
+    date: string
 }
+
 const {
-    tittle,
-    tittle_es,
-    tittle_en,
-    description,
+    title_es,
+    title_en,
     description_es,
     description_en,
     link,
     date
 } = Astro.props;
-
-const titleEs = tittle_es ?? tittle ?? '';
-const titleEn = tittle_en ?? tittle ?? '';
-const descEs = description_es ?? description ?? '';
-const descEn = description_en ?? description ?? '';
 ---
-               
-<div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-<time class="mb-1 text-sm font-normal leading-none text-gray-300/80">{date}</time>
-<h3 class="text-lg font-semibold opacity-90 text-yellow-300/80 mt-2.5">
-    <span data-lang="es">{titleEs}</span>
-    <span data-lang="en">{titleEn}</span>
-</h3>
-<p class="mb-4 text-base font-normal text-gray-300 text-pretty">
-    <span data-lang="es">{descEs}</span>
-    <span data-lang="en">{descEn}</span>
-</p>
-{
-    link && (
-        <a href={link}
-            class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">
-            <span data-lang="es">Saber más...</span>
-            <span data-lang="en">Learn more...</span>
-            <svg class="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-            </svg>
-        </a>
-    )
-}
+
+<div class="absolute w-4 h-4 bg-yellow-400 rounded-full mt-1.5 -start-2.5 border-2 border-black shadow-[0_0_10px_rgba(250,204,21,0.6)]"></div>
+
+<div class="p-5 border border-white/10 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors duration-300 shadow-lg">
+    
+    <time class="mb-2 text-sm font-mono leading-none text-yellow-200/90 block">{date}</time>
+    
+    <h3 class="text-xl font-bold text-white mt-2">
+        <span data-lang="es">{title_es}</span>
+        <span data-lang="en" class="hidden">{title_en}</span>
+    </h3>
+
+    <p class="mb-4 text-base font-light text-gray-300 text-pretty mt-3 leading-relaxed">
+        <span data-lang="es">{description_es}</span>
+        <span data-lang="en" class="hidden">{description_en}</span>
+    </p>
+
+    {
+        link && (
+            <a href={link}
+               target="_blank"
+               rel="noopener noreferrer"
+               class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 hover:scale-105 hover:border-yellow-400/50 transition-all duration-300 focus:z-10 focus:outline-none group">
+                
+                <span data-lang="es">Saber más</span>
+                <span data-lang="en" class="hidden">Learn more</span>
+                
+                <svg class="w-3 h-3 ms-2 rtl:rotate-180 group-hover:translate-x-1 transition-transform" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </a>
+        )
+    }
+</div>
+

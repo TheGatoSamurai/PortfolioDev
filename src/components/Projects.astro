@@ -3,7 +3,6 @@ import HTML from './icon/Html.astro';
 import CSS from './icon/Css.astro';
 import JavaScript from './icon/Js.astro';
 import Bootstrap from './icon/Bootstrap.astro';
-import ProjectItem from "./ProjectItem.astro";
 import Typescript from './icon/Typescript.astro';
 import Angular from './icon/Angular.astro';
 import Ionic from './icon/Ionic.astro';
@@ -17,173 +16,107 @@ import Node from './icon/Node.astro';
 import Discord from './icon/Discord.astro';
 import React from './icon/React.astro';
 import SqLite from './icon/SqLite.astro';
-import LanguageToggle from './LanguageToggle.astro';
+import ProjectItem from "./ProjectItem.astro";
 
+// Simplifiqué los TAGS porque el estilo visual ahora lo maneja la tarjeta (ProjectItem)
+// Solo necesitamos Nombre e Icono.
 const TAGS = {
-    HTML: {
-        name: "HTML",
-        class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200",
-        icon: HTML,
-    },
-    CSS: {
-        name: "Css",
-        class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 ",
-        icon: CSS,
-    },
-    JavaScript : {
-        name: "JavaScript",
-        class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 ",
-        icon: JavaScript,
-    },
-    Bootstrap: {
-        name: "Bootstrap",
-        class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200",
-        icon: Bootstrap,
-    },
-    Angular: {
-      name: "Angular",
-      class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-red-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-red-200 ",
-      icon: Angular,
-    },
-    Ionic: {
-      name: "Ionic",
-      class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300",
-      icon: Ionic,
-    },
-    Typescript: {
-      name: "Typescript",
-      class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-teal-300 to-lime-300 group-hover:from-teal-300 group-hover:to-lime-300 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-lime-200 ",
-      icon: Typescript,
-    },
-    IconAstro: {
-      name: "Astro",
-      class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200",
-      icon: IconAstro,
-    },
-    IconTailwind: {
-      name: "Tailwind",
-      class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200",
-      icon: IconTailwind,
-    },
-    Shopify: {
-      name: "Shopify",
-      class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200",
-      icon: Shopify,
-    },
-    Flutter: {
-      name: "Flutter",
-      class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200",
-      icon: Flutter,
-    },
-    FireBase: {
-      name: "FireBase",
-      class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200",
-      icon: FireBase,
-    },
-    Python: {
-      name: "Python",
-      class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-yellow-400 to-red-500 group-hover:from-yellow-400 group-hover:to-red-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-yellow-200",
-      icon: Python,
-    },
-    Node: {
-      name: "Node.js",
-      class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200",
-      icon: Node,
-    },
-    Discord:{
-      name: "Discord",
-      class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-blue-500 to-purple-600 group-hover:from-blue-500 group-hover:to-purple-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-200",
-      icon: Discord,
-    },
-    React:{
-      name: "React",
-      class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200",
-      icon: React,
-    },
-    SqLite:{
-      name: "SQLite",
-      class: "relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200",
-      icon: SqLite,
-    }
-
+    HTML: { name: "HTML", icon: HTML },
+    CSS: { name: "CSS", icon: CSS },
+    JavaScript: { name: "JavaScript", icon: JavaScript },
+    Bootstrap: { name: "Bootstrap", icon: Bootstrap },
+    Angular: { name: "Angular", icon: Angular },
+    Ionic: { name: "Ionic", icon: Ionic },
+    Typescript: { name: "TypeScript", icon: Typescript },
+    IconAstro: { name: "Astro", icon: IconAstro },
+    IconTailwind: { name: "Tailwind", icon: IconTailwind },
+    Shopify: { name: "Shopify", icon: Shopify },
+    Flutter: { name: "Flutter", icon: Flutter },
+    FireBase: { name: "Firebase", icon: FireBase },
+    Python: { name: "Python", icon: Python },
+    Node: { name: "Node.js", icon: Node },
+    Discord: { name: "Discord", icon: Discord },
+    React: { name: "React", icon: React },
+    SqLite: { name: "SQLite", icon: SqLite },
 };
+
 const CARD_DATA = [
   {
-    title_es: "App QR",
-    title_en: "QR App",
-    description_es: "App en Angular y Ionic para generar codigos QR con un formulario de contacto",
-    description_en: "Angular + Ionic app to generate QR codes with a contact form",
+    title_es: "Tótem de IA Interactivo",
+    title_en: "Interactive AI Totem",
+    description_es: "Sistema inteligente con Visión Artificial y LLMs. Integra reconocimiento de voz y procesamiento de lenguaje natural para asistencia en tiempo real.",
+    description_en: "Smart system featuring Computer Vision and LLMs. Integrates voice recognition and natural language processing for real-time assistance.",
+    image: "/images/Lia.png",
+    tags: [TAGS.Python, TAGS.Node, TAGS.JavaScript, TAGS.React], 
+    link: "https://github.com/TheGatoSamurai/TotemAi",
+  },
+  {
+    title_es: "Sistema de Reservas Full Stack", 
+    title_en: "Full Stack Booking System",
+    description_es: "Plataforma de gestión de citas con panel administrativo. Incluye manejo de base de datos relacional y lógica de disponibilidad dinámica.",
+    description_en: "Appointment management platform with admin dashboard. Includes relational database handling and dynamic availability logic.",
+    image: "/images/Reservas.png",
+    tags: [TAGS.React, TAGS.Node, TAGS.SqLite, TAGS.IconTailwind],
+    link: "https://github.com/TheGatoSamurai/SistemadeReserva",
+  },
+  {
+    title_es: "Consultoría E-commerce Industrial (BGE)",
+    title_en: "Industrial E-commerce Consultant (BGE)",
+    description_es: "Transformación digital B2B. Migración completa de dominio, configuración DNS segura y capacitación técnica para autogestión del cliente.",
+    description_en: "B2B digital transformation. Full domain migration, secure DNS configuration, and technical training for client self-management.",
+    image: "/images/BGE.png",
+    tags: [TAGS.Shopify, TAGS.JavaScript, TAGS.CSS, TAGS.HTML],
+    link: "https://hojalateriabge.cl"
+  },
+  {
+    title_es: "Easy OCR Automator", 
+    title_en: "Easy OCR Automator",
+    description_es: "Solución en Python para digitalizar texto desde imágenes (OCR), optimizando flujos de trabajo y procesamiento de documentos.",
+    description_en: "Python solution to digitize text from images (OCR), optimizing workflows and document processing.",
+    image: "/images/OCR.png",
+    link: "https://github.com/TheGatoSamurai/EasyOCR-Reader",
+    tags: [TAGS.Python, TAGS.JavaScript],
+  },
+  {
+    title_es: "Portal Web Institucional (AET)",
+    title_en: "Institutional Web Portal (AET)",
+    description_es: "Web moderna de alto rendimiento optimizada para SEO. Conecta a la comunidad mediante una interfaz accesible y eventos digitales.",
+    description_en: "High-performance modern website optimized for SEO. Connects the community through an accessible interface and digital events.",
+    image: "/images/aet.jpg",
+    tags: [TAGS.IconAstro, TAGS.IconTailwind, TAGS.JavaScript],
+    link: "https://ministerioaet.cl"
+  },
+  {
+    title_es: "BotNeko - Admin Tool",
+    title_en: "BotNeko - Admin Tool",
+    description_es: "Bot de automatización para comunidades en Discord. Gestiona moderación y consume APIs externas para interactividad en tiempo real.",
+    description_en: "Automation bot for Discord communities. Manages moderation and consumes external APIs for real-time interactivity.",
+    image: "/images/BotNeko.png",
+    tags: [TAGS.Node, TAGS.Discord, TAGS.JavaScript],
+    link: "https://github.com/TheGatoSamurai/BotNeko",
+  },
+  {
+    title_es: "App QR Híbrida",
+    title_en: "Hybrid QR App",
+    description_es: "Aplicación móvil para control de acceso mediante códigos QR. Desarrollada con arquitectura de componentes en Angular y Ionic.",
+    description_en: "Mobile application for access control via QR codes. Developed with component-based architecture in Angular and Ionic.",
     image: "/images/QR.png",
-    tags: [TAGS.HTML, TAGS.Angular, TAGS.Ionic, TAGS.Typescript, TAGS.JavaScript],
-    link:"https://github.com/TheGatoSamurai/TuClaseQR_008v",
-
+    tags: [TAGS.Angular, TAGS.Ionic, TAGS.Typescript],
+    link: "https://github.com/TheGatoSamurai/TuClaseQR_008v",
   },
   {
-  title_es: "Sun y Neko",
-  title_en: "Sun y Neko",
-  description_es: "Tienda de ropa con un diseño minimalista y elegante usando el diseño de la marca Sun y Neko",
-  description_en: "Clothing store with a minimalist, elegant design for the Sun y Neko brand",
-  image: "/images/Sunyneko.png",
-  tags: [TAGS.Shopify ,TAGS.HTML, TAGS.CSS, TAGS.JavaScript ],
-  },
-  {
-  title_es: "Easy OCR Reader",
-  title_en: "Easy OCR Reader",
-  description_es: "Una herramienta simple para aplicar OCR (Reconocimiento Óptico de Caracteres).",
-  description_en: "A simple tool to perform OCR (Optical Character Recognition).",
-  image: "/images/OCR.png",
-  link: "https://github.com/TheGatoSamurai/EasyOCR-Reader",
-  tags: [TAGS.Python, TAGS.JavaScript],
-  },
-  {
-  title_es: "BotNeko",
-  title_en: "BotNeko",
-  description_es: "Un bot de Discord para gestionar mi servidor personal.",
-  description_en: "A Discord bot to manage my personal server.",
-  image: "/images/BotNeko.png",
-  tags: [TAGS.JavaScript, TAGS.Node, TAGS.Discord],
-  link:"https://github.com/TheGatoSamurai/BotNeko",
-  },
-{title_es: "Sistema de Reservas",
-  title_en: "Booking System",
-  description_es: "Sistema de reservas para gestionar citas y disponibilidad.",
-  description_en: "Booking system to manage appointments and availability.",
-  image: "/images/Reservas.png",
-  tags: [TAGS.HTML, TAGS.IconAstro, TAGS.IconTailwind, TAGS.React, TAGS.JavaScript, TAGS.Node, TAGS.SqLite],
-  link:"https://github.com/TheGatoSamurai/SistemadeReserva",
-},
-{
-  title_es: "Tótem de IA Interactivo",
-  title_en: "Interactive AI Totem",
-  description_es: "Asistente virtual modular con Python, visión artificial, LLMs y UI interactiva.",
-  description_en: "Modular virtual assistant with Python, computer vision, LLMs, and interactive UI.",
-  image: "/images/Lia.png",
-  tags: [TAGS.Python, TAGS.Node, TAGS.JavaScript, TAGS.React, TAGS.HTML],
-  link:"https://github.com/TheGatoSamurai/TotemAi",
-},
-{
-  title_es: "Desarrollador Web & Consultor E-commerce",
-  title_en: "Web Developer & E-commerce Consultant",
-  description_es: "Lanzamiento y configuración de tienda e-commerce en Shopify para el sector industrial. Migración de dominio, gestión DNS y capacitación al cliente.",
-  description_en: "Launched and configured a Shopify e-commerce store for an industrial client. Domain migration, DNS management, and client training.",
-  image: "/images/BGE.png",
-  tags: [TAGS.Shopify, TAGS.HTML, TAGS.CSS, TAGS.JavaScript],
-  link:"https://hojalateriabge.cl"
-},
-{
-  title_es: "Web de Iglesia",
-  title_en: "Church Website",
-  description_es: "Desarrollando: Web de iglesia, basada en astro y tailwind",
-  description_en: "In development: church website built with Astro and Tailwind",
-  image: "/images/AET.png",
-  tags: [TAGS.HTML, TAGS.IconAstro, TAGS.IconTailwind, TAGS.JavaScript],
-  link:"https://iglesiaahoraeseltiempo.cl"
-}
+    title_es: "Sun y Neko Branding",
+    title_en: "Sun y Neko Branding",
+    description_es: "E-commerce de moda nicho. Personalización avanzada de plantilla y estrategia de diseño minimalista para maximizar conversión.",
+    description_en: "Niche fashion e-commerce. Advanced template customization and minimalist design strategy to maximize conversion.",
+    image: "/images/Sunyneko.png",
+    tags: [TAGS.Shopify, TAGS.CSS, TAGS.HTML],
+  }
 ]
 ---
 
-<container class="grid grid-cols-1 lg:grid-cols-2 gap-6 justify-items-center">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 md:px-0">
   {CARD_DATA.map((card) => (
     <ProjectItem {...card} />
   ))}
-</container>
+</div>

@@ -1,4 +1,5 @@
 ---
+// Importación de Iconos
 import HTML from './icon/skill/SkillHtml.astro';
 import CSS from './icon/skill/SkillCss.astro';
 import JavaScript from './icon/skill/SkillJs.astro';
@@ -35,252 +36,101 @@ import WooComerce from './icon/skill/WooComerce.astro';
 import Wordpress from './icon/skill/WordPress.astro';
 import Notion from './icon/skill/Notion.astro';
 
+// Estructura de Datos (Para no repetir código HTML)
+const SKILLS_DATA = [
+    {
+        title_es: "Frontend",
+        title_en: "Frontend",
+        iconClass: "text-blue-400", // Color del icono del título (opcional)
+        skills: [
+            { name: "Astro", icon: IconAstro },
+            { name: "HTML", icon: HTML },
+            { name: "CSS", icon: CSS },
+            { name: "JavaScript", icon: JavaScript },
+            { name: "Tailwind", icon: IconTailwind },
+            { name: "Sass", icon: Sass },
+            { name: "TypeScript", icon: Typescript },
+            { name: "Flutter", icon: Flutter },
+            { name: "React", icon: React },
+        ]
+    },
+    {
+        title_es: "Backend",
+        title_en: "Backend",
+        iconClass: "text-green-400",
+        skills: [
+            { name: "Angular", icon: Angular },
+            { name: "Ionic", icon: Ionic },
+            { name: "Firebase", icon: Firebase },
+            { name: "Bootstrap", icon: Bootstrap },
+            { name: "MySQL", icon: Mysql },
+            { name: "Python", icon: Python },
+            { name: "PL/SQL", icon: PlSql },
+            { name: "Java", icon: Java },
+            { name: "MongoDB", icon: MongoDb },
+        ]
+    },
+    {
+        title_es: "Aprendiendo",
+        title_en: "Learning",
+        iconClass: "text-purple-400",
+        skills: [
+            { name: "C#", icon: Csharp },
+            { name: "Godot", icon: Godot },
+            { name: "PHP", icon: Php },
+            { name: "WordPress", icon: Wordpress },
+            { name: "WooCommerce", icon: WooComerce },
+            { name: "Moodle", icon: Moodle },
+        ]
+    },
+    {
+        title_es: "Herramientas",
+        title_en: "Tools",
+        iconClass: "text-yellow-400",
+        skills: [
+            { name: "Git", icon: GitOnly },
+            { name: "VS Code", icon: Vscode },
+            { name: "Shopify", icon: Shopify },
+            { name: "GitHub", icon: GitHub },
+            { name: "NPM", icon: Npm },
+            { name: "Bun", icon: Bun },
+            { name: "Canva", icon: Canva },
+            { name: "Android Studio", icon: AndroidStudio },
+            { name: "Linux", icon: Linux },
+            { name: "Confluence", icon: Confluence },
+            { name: "Notion", icon: Notion },
+        ]
+    }
+];
 ---
-<div class="grid mx-2  rounded-lg md:mb-12 md:grid-cols-2 border-lg shadow-xl shadow-gray-500/30 opacity-70 bg-gradient-to-1 ">
-    <figure class=" shadow-inner shadow-purple-700/30 py-3 flex flex-col items-center justify-center p-8 text-center bg-gradient-to-l border-2xl rounded-ss-lg from-purple-700/40 to-blue-600/30  ">
-        <blockquote class=" max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-            <!-- Front -->
-            <h3 class="text-lg font-semibold text-yellow-400">FrontEnd</h3>
-            <div class=" py-3 flex flex-wrap justify-center gap-4">
-                <div>
-                    <div class="flex flex-wrap justify-center gap-4  content-center mx-auto">
-                    <IconAstro class="items-center shadow-sm content-center  size-10"  />
-                    </div>
-                    <p class="text-xs text-center mx-auto justify-center list-none font-sans text-pretty text-gray-400 flex-wrap flex ">Astro</p>
-                </div>  
-                <div>
-                    <div class="flex flex-wrap justify-center gap-4 text-orange-400/80 content-center mx-auto">
-                    <HTML class="items-center shadow-sm content-center  size-10" />
-                    </div>
-                    <p class="text-xs text-center mx-auto justify-center list-none font-sans text-pretty text-gray-400 flex-wrap flex ">HTML</p>
-                </div>
-                <div>
-                <div class="flex flex-wrap justify-center gap-4 text-orange-400/80 content-center mx-auto">
-                    </div>
-                    <CSS class="items-center content-center size-10"  />
-                    <p class="text-xs text-center justify-center mx-auto list-none font-sans text-pretty text-gray-400 flex-wrap flex ">CSS</p>
-                </div>
-                <div>
-                    <div class="flex flex-wrap justify-center gap-4 text-orange-400/80 content-center mx-auto">
-                    <JavaScript class="items-center shadow-sm content-center size-10" />
-                    </div>
-                    <p class="text-xs text-center mx-auto justify-center list-none font-sans text-pretty text-gray-400 flex-wrap flex ">JavaScript</p>
-                </div> 
-                <div>
-                <div class="flex flex-wrap justify-center gap-4 text-orange-400/80 content-center mx-auto">
-                    </div>
-                    <IconTailwind class="items-center content-center size-10"  />
-                    <p class="text-xs text-center justify-center mx-auto list-none font-sans text-pretty text-gray-400 flex-wrap flex ">Tailwind</p>
-                </div>  
-                <div>
-                <div class="flex flex-wrap justify-center gap-4 text-orange-400/80 content-center mx-auto">
-                    </div>
-                    <Sass class="items-center content-center size-10"   />
-                    <p class="text-xs text-center justify-center mx-auto list-none font-sans text-pretty text-gray-400 flex-wrap flex ">Sass</p>
-                </div>     
-            </div>
-        </blockquote>   
-    </figure>
-    <figure class="shadow-inner shadow-purple-700/30 flex flex-col items-center justify-center p-8 text-center bg-gradient-to-l rounded-se-lg bg-gradient from-purple-600/50 to-blue-800/40">
-        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-            <!-- BackEnd -->
-            <h3 class="text-lg font-semibold  text-yellow-400">BackEnd</h3>
-            <div class=" py-3 flex flex-wrap justify-center gap-4">
-                <div>
-                    <div class="flex flex-wrap justify-center gap-4 text-orange-400/80 content-center mx-auto">
-                    <Angular class="items-center shadow-sm content-center  size-10"/>
-                    </div>
-                    <p class="text-xs text-center mx-auto justify-center list-none font-sans text-pretty text-gray-400 flex-wrap flex ">Angular</p>
-                </div> 
-                <div>
-                    <div class="flex flex-wrap justify-center gap-4 text-orange-400/80 content-center mx-auto">
-                    <Ionic class="items-center shadow-sm content-center size-10" />
-                    </div>
-                    <p class="text-xs text-center mx-auto justify-center list-none font-sans text-pretty text-gray-400 flex-wrap flex ">Ionic</p>
-                </div> 
-                <div>
-                <div class="flex flex-wrap justify-center gap-4 text-orange-400/80 content-center mx-auto">
-                    </div>
-                    <Firebase class="items-center content-center rounded-full size-10" />
-                    <p class="text-xs text-center justify-center mx-auto list-none font-sans text-pretty text-gray-400 flex-wrap flex ">Firebase</p>
-                </div> 
-                <div>
-                    <div class="flex flex-wrap justify-center gap-4 text-orange-400/80 content-center mx-auto">
-                    <Bootstrap class="items-center shadow-sm content-center rounded-full size-10" />
-                    </div>
-                    <p class="text-xs text-center mx-auto justify-center list-none font-sans text-pretty text-gray-400 flex-wrap flex ">Bootstrap</p>
-                </div> 
-                <div>
-                    <div class="flex flex-wrap justify-center gap-4 text-orange-400/80 content-center mx-auto">
-                    <Mysql class="items-center shadow-sm content-center size-10" />
-                    </div>
-                    <p class="text-xs text-center mx-auto justify-center list-none font-sans text-pretty text-gray-400 flex-wrap flex ">MySql</p>
-                </div> 
-                <div>
-                    <div class="flex flex-wrap justify-center gap-4 text-orange-400/80 content-center mx-auto">
-                    <Python class="items-center shadow-sm content-center size-10"  />
-                    </div>
-                    <p class="text-xs text-center mx-auto justify-center list-none font-sans text-pretty text-gray-400 flex-wrap flex ">Python</p>
-                </div> 
-                <div>
-                    <div class="flex flex-wrap justify-center gap-4 text-orange-400/80 content-center mx-auto">
-                    <PlSql class="items-center shadow-sm content-center  size-10"  />
-                    </div>
-                    <p class="text-xs text-center mx-auto justify-center list-none font-sans text-pretty text-gray-400 flex-wrap flex ">Pl/Sql</p>
-                </div> 
-                <div>
-                    <div class="flex flex-wrap justify-center gap-4 text-orange-400/80 content-center mx-auto">
-                    <Java class="items-center shadow-sm content-center  size-10"  />
-                    </div>
-                    <p class="text-xs text-center mx-auto justify-center list-none font-sans text-pretty text-gray-400 flex-wrap flex ">Java</p>
-                </div> 
-                <div>
-                    <div class="flex flex-wrap justify-center gap-4 text-orange-400/80 content-center mx-auto">
-                    <MongoDb class="items-center shadow-sm content-center  size-10"  />
-                    </div>
-                    <p class="text-xs text-center mx-auto justify-center list-none font-sans text-pretty text-gray-400 flex-wrap flex ">MongoDb</p>
-                </div> 
-            </div>
-        </blockquote>
-    </figure>
-    <figure class="shadow-inner shadow-purple-700/30  flex flex-col items-center justify-center p-8 text-center bg-gradient-to-l rounded-es-lg  bg-gradient from-purple-600/50 to-blue-800/40">
-        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-            <!-- Aprendiendo -->
-            <h3 data-lang="es" class="text-lg font-semibold  text-yellow-400">Aprendiendo</h3>
-            <h3 data-lang="en" class="text-lg font-semibold  text-yellow-400">Learning</h3>
-            <div class=" py-3 flex flex-wrap justify-center gap-4"> 
-                <div>
-                    <div class="flex flex-wrap justify-center gap-4  content-center mx-auto">
-                    <Typescript class="items-center shadow-sm content-center size-10"/>
-                    </div>
-                    <p class="text-xs text-center mx-auto justify-center list-none font-sans text-pretty text-gray-400 flex-wrap flex ">Typescript</p>
-                </div> 
-                <div>
-                    <div class="flex flex-wrap justify-center gap-4  content-center mx-auto">
-                    <Flutter class="items-center shadow-sm content-center size-10" />
-                    </div>
-                    <p class="text-xs text-center mx-auto justify-center list-none font-sans text-pretty text-gray-400 flex-wrap flex ">Flutter</p>
-                </div> 
-                <div>
-                    <div class="flex flex-wrap justify-center gap-4  content-center mx-auto">
-                    <React class="items-center shadow-sm content-center size-10" />
-                    </div>
-                    <p class="text-xs text-center mx-auto justify-center list-none font-sans text-pretty text-gray-400 flex-wrap flex ">React</p>
-                </div> 
-                <div>
-                    <div class="flex flex-wrap justify-center gap-4  content-center mx-auto">
-                    <Csharp class="items-center shadow-sm content-center rounded-full size-10" />
-                    </div>
-                    <p class="text-xs text-center mx-auto justify-center list-none font-sans text-pretty text-gray-400 flex-wrap flex ">C#</p>
-                </div> 
-                <div>
-                    <div class="flex flex-wrap justify-center gap-4  content-center mx-auto">
-                    <Godot class="items-center shadow-sm content-center rounded-full size-10" />
-                    </div>
-                    <p class="text-xs text-center mx-auto justify-center list-none font-sans text-pretty text-gray-400 flex-wrap flex ">Godot</p>
-                </div> 
-                <div>
-                    <div class="flex flex-wrap justify-center gap-4  content-center mx-auto">
-                    <Php class="items-center shadow-sm content-center rounded-full size-10" />
-                    </div>
-                    <p class="text-xs text-center mx-auto justify-center list-none font-sans text-pretty text-gray-400 flex-wrap flex ">Php</p>
-                </div>
-                <div>
-                    <div class="flex flex-wrap justify-center gap-4  content-center mx-auto">
-                    <Wordpress class="items-center shadow-sm content-center rounded-full size-10" />
-                    </div>
-                    <p class="text-xs text-center mx-auto justify-center list-none font-sans text-pretty text-gray-400 flex-wrap flex ">WordPress</p>
-                </div> 
-                <div>
-                    <div class="flex flex-wrap justify-center gap-4  content-center mx-auto">
-                    <WooComerce class="items-center shadow-sm content-center rounded-full size-10" />
-                    </div>
-                    <p class="text-xs text-center mx-auto justify-center list-none font-sans text-pretty text-gray-400 flex-wrap flex ">WooCommerce</p>
-                </div> 
-                <div>
-                    <div class="flex flex-wrap justify-center gap-4  content-center mx-auto">
-                    <Moodle class="items-center shadow-sm content-center  size-10" />
-                    </div>
-                    <p class="text-xs text-center mx-auto justify-center list-none font-sans text-pretty text-gray-400 flex-wrap flex ">Moodle</p>
-                </div> 
-            </div>
-        </blockquote>
-        
-    </figure>
-    <figure class=" shadow-inner shadow-purple-700/30  flex flex-col items-center justify-center p-8 text-center bg-gradient-to-l md:rounded-ee-lg bg-gradient from-purple-700/60 to-blue-800/60">
-        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-            <!-- Herramientas -->
-            <h3 data-lang="es" class="text-lg font-semibold  text-yellow-400">Herramientas</h3>
-            <h3 data-lang="en" class="text-lg font-semibold  text-yellow-400">Tools</h3>
-            <div class=" py-3 flex flex-wrap justify-center gap-4"> 
-                <div>
-                    <div class="flex flex-wrap justify-center gap-4  content-center mx-auto">
-                    <GitOnly class="items-center shadow-sm content-center size-10" />
-                    </div>
-                    <p class="text-xs text-center mx-auto justify-center list-none font-sans text-pretty text-gray-400 flex-wrap flex ">Git</p>
-                </div> 
-                <div>
-                    <div class="flex flex-wrap justify-center gap-4  content-center mx-auto">
-                    <Vscode class="items-center shadow-sm content-center size-10" />
-                    </div>
-                    <p class="text-xs text-center mx-auto justify-center list-none font-sans text-pretty text-gray-400 flex-wrap flex ">Vs Code</p>
-                </div>
-                <div>
-                    <div class="flex flex-wrap justify-center gap-4  content-center mx-auto">
-                    <Shopify class="items-center shadow-sm content-center size-10" />
-                    </div>
-                    <p class="text-xs text-center mx-auto justify-center list-none font-sans text-pretty text-gray-400 flex-wrap flex ">Shopify</p>
-                </div> 
-                <div>
-                    <div class="flex flex-wrap justify-center gap-4  content-center mx-auto " >
-                    <GitHub class="items-center shadow-sm content-center size-10  drop-shadow-md"  />
-                    </div>
-                    <p class="text-xs text-center mx-auto justify-center list-none font-sans text-pretty text-gray-400 flex-wrap flex ">GitHub</p>
-                </div> 
-                <div>
-                    <div class="flex flex-wrap justify-center gap-4  content-center mx-auto">
-                    <Npm class="items-center shadow-sm content-center  size-10" />
-                    </div>
-                    <p class="text-xs text-center mx-auto justify-center list-none font-sans text-pretty text-gray-400 flex-wrap flex ">Npm</p>
-                </div>
-                <div>
-                    <div class="flex flex-wrap justify-center gap-4  content-center mx-auto">
-                    <Bun class="items-center shadow-sm content-center  size-10" />
-                    </div>
-                    <p class="text-xs text-center mx-auto justify-center list-none font-sans text-pretty text-gray-400 flex-wrap flex ">Bun</p>
-                </div>
-                <div>
-                    <div class="flex flex-wrap justify-center gap-4  content-center mx-auto">
-                    <Canva class="items-center shadow-sm content-center  size-10" />
-                    </div>
-                    <p class="text-xs text-center mx-auto justify-center list-none font-sans text-pretty text-gray-400 flex-wrap flex ">Canva</p>
-                </div>
-                <div>
-                    <div class="flex flex-wrap justify-center gap-4  content-center mx-auto">
-                    <AndroidStudio class="items-center shadow-sm content-center  size-10" />
-                    </div>
-                    <p class="text-xs text-center mx-auto justify-center list-none font-sans text-pretty text-gray-400 flex-wrap flex ">Android Studio</p>
-                </div>
-                <div>
-                    <div class="flex flex-wrap justify-center gap-4  content-center mx-auto">
-                    <Linux class="items-center shadow-sm content-center  size-10" />
-                    </div>
-                    <p class="text-xs text-center mx-auto justify-center list-none font-sans text-pretty text-gray-400 flex-wrap flex ">Linux</p>
-                </div>
-                <div>
-                    <div class="flex flex-wrap justify-center gap-4  content-center mx-auto">
-                    <Confluence class="items-center shadow-sm content-center  size-10" />
-                    </div>
-                    <p class="text-xs text-center mx-auto justify-center list-none font-sans text-pretty text-gray-400 flex-wrap flex ">Confluence</p>
-                </div>
-                <div>
-                    <div class="flex flex-wrap justify-center gap-4  content-center mx-auto">
-                    <Notion class="items-center shadow-sm content-center  size-10" />
-                    </div>
-                    <p class="text-xs text-center mx-auto justify-center list-none font-sans text-pretty text-gray-400 flex-wrap flex ">Notion</p>
-                </div>
-            </div>
-        </blockquote>
-         
-    </figure>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+    
+    {SKILLS_DATA.map((group) => (
+        <article class="bg-white/5 border border-white/10 rounded-[2rem] p-6 md:p-8 hover:bg-white/[0.07] hover:border-white/20 transition-all duration-300 shadow-xl backdrop-blur-sm group/card">
+            
+            <h3 class="text-xl md:text-2xl font-bold mb-6 flex items-center gap-3 text-white border-b border-white/5 pb-4">
+                <span class={`w-2 h-8 rounded-full bg-gradient-to-b from-yellow-400 to-transparent opacity-80`}></span>
+                <span data-lang="es">{group.title_es}</span>
+                <span data-lang="en" class="hidden">{group.title_en}</span>
+            </h3>
+
+            <ul class="grid grid-cols-3 sm:grid-cols-4 gap-4 justify-items-center">
+                {group.skills.map((skill) => (
+                    <li class="flex flex-col items-center gap-2 group/skill w-full">
+                        
+                        <div class="relative flex items-center justify-center w-16 h-16 rounded-2xl bg-black/20 border border-white/5 shadow-inner transition-all duration-300 group-hover/skill:scale-110 group-hover/skill:bg-white/10 group-hover/skill:border-yellow-400/30 group-hover/skill:shadow-[0_0_15px_rgba(250,204,21,0.1)]">
+                            <skill.icon class="size-8 md:size-9 transition-transform duration-300 group-hover/skill:rotate-3" />
+                        </div>
+                        
+                        <span class="text-xs font-medium text-gray-400 group-hover/skill:text-yellow-200 transition-colors text-center w-full truncate px-1">
+                            {skill.name}
+                        </span>
+
+                    </li>
+                ))}
+            </ul>
+        </article>
+    ))}
+
 </div>
