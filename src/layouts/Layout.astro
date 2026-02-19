@@ -32,8 +32,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? Astro.url);
             document.documentElement.dataset.lang = savedLang;
             document.documentElement.lang = savedLang; // También cambiamos el atributo lang del HTML
         </script>
-        
-        <GoogleAnalytics />
+
 
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
@@ -60,6 +59,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? Astro.url);
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={imageURL} />
+
+        <GoogleAnalytics />
     </head>
     <body>
         <div class="background"></div>
